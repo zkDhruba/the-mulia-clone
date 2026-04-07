@@ -56,23 +56,30 @@ export default function Home() {
   ];
 
   return (
-    <div className="flex flex-col min-h-screen relative w-full">
-      {/* Hero Wrapper */}
-      <section className="relative h-[200vh] w-full z-0">
-        <div className="sticky top-0 w-full h-screen overflow-hidden">
-          <NavbarHero />
-          <HeroSection 
-            title="Extraordinary Luxury Awaits"
-            subtitle="Mulia Hotels & Resorts"
-            description="Indulge in a world of refined elegance and exceptional service in Bali and Jakarta."
-            ctaText="Book Your Stay"
-            secondaryCtaText="Explore Destinations"
-            secondaryCtaHref="#destinations"
-          />
-        </div>
-      </section>
+    <div className="relative w-full">
+      {/* 
+        Sticky Hero Layer:
+        -sticky top-0 pins it to the viewport.
+        -h-screen makes it fill the view.
+        --z-10 ensures it stays behind the main content.
+      */}
+      <div className="sticky top-0 h-screen w-full -z-10 overflow-hidden">
+        <NavbarHero />
+        <HeroSection 
+          title="Extraordinary Luxury Awaits"
+          subtitle="Mulia Hotels & Resorts"
+          description="Indulge in a world of refined elegance and exceptional service in Bali and Jakarta."
+          ctaText="Book Your Stay"
+          secondaryCtaText="Explore Destinations"
+          secondaryCtaHref="#destinations"
+        />
+      </div>
 
-      {/* Main Content Section */}
+      {/* 
+        Main Content Layer:
+        -relative z-20 pulls it above the sticky hero.
+        -bg-white (or any opaque background) ensures it covers the hero as you scroll.
+      */}
       <section className="relative z-20 bg-white">
         {/* NavbarMain becomes sticky when it reaches the top, seamlessly replacing NavbarHero */}
         <NavbarMain />
