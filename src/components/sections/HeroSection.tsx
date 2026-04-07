@@ -36,8 +36,7 @@ export const HeroSection: React.FC<HeroProps> = ({
 }) => {
   return (
     <section className={cn(
-      "relative w-full overflow-hidden flex items-center justify-center pt-24",
-      fullHeight ? "min-h-screen" : "h-[70vh]"
+      "relative w-full h-full overflow-hidden flex items-center justify-center pt-24",
     )}>
       {/* Background Layer */}
       <div className="absolute inset-0 z-0">

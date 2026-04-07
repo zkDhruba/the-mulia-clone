@@ -3,6 +3,8 @@ import { HeroSection } from "@/components/sections/HeroSection";
 import { BookingBar } from "@/components/sections/BookingBar";
 import { ContentGrid } from "@/components/sections/ContentGrid";
 import { Card } from "@/components/shared/Card";
+import { NavbarHero } from "@/components/layout/NavbarHero";
+import { NavbarMain } from "@/components/layout/NavbarMain";
 
 export default function Home() {
   const destinations = [
@@ -54,50 +56,63 @@ export default function Home() {
   ];
 
   return (
-    <div className="flex flex-col min-h-screen">
-      {/* Hero Section */}
-      <HeroSection 
-        title="Extraordinary Luxury Awaits"
-        subtitle="Mulia Hotels & Resorts"
-        description="Indulge in a world of refined elegance and exceptional service in Bali and Jakarta."
-        ctaText="Book Your Stay"
-        secondaryCtaText="Explore Destinations"
-        secondaryCtaHref="#destinations"
-      />
+    <div className="flex flex-col min-h-screen relative w-full">
+      {/* Hero Wrapper */}
+      <section className="relative h-[200vh] w-full z-0">
+        <div className="sticky top-0 w-full h-screen overflow-hidden">
+          <NavbarHero />
+          <HeroSection 
+            title="Extraordinary Luxury Awaits"
+            subtitle="Mulia Hotels & Resorts"
+            description="Indulge in a world of refined elegance and exceptional service in Bali and Jakarta."
+            ctaText="Book Your Stay"
+            secondaryCtaText="Explore Destinations"
+            secondaryCtaHref="#destinations"
+          />
+        </div>
+      </section>
 
-      {/* Booking Bar (Sticky Overlaying Hero) */}
-      <div className="relative z-20 lg:-mt-16">
-        <BookingBar />
-      </div>
+      {/* Main Content Section */}
+      <section className="relative z-20 bg-white">
+        {/* NavbarMain becomes sticky when it reaches the top, seamlessly replacing NavbarHero */}
+        <NavbarMain />
+        
+        {/* Booking Bar */}
+        <div className="relative z-20 w-full bg-white pt-4 lg:pt-8 shadow-sm">
+          <BookingBar />
+        </div>
 
-      {/* Destinations Grid */}
-      <ContentGrid 
-        // id="destinations"
-        title="Our Award-Winning Destinations"
-        subtitle="Explore Mulia"
-        description="From the white sands of Nusa Dua to the vibrant heart of Jakarta, discover luxury that knows no bounds."
-        centered
-      >
-        {destinations.map((dest) => (
-          <Card key={dest.title} {...dest} />
-        ))}
-      </ContentGrid>
+        {/* Destinations Grid */}
+        <div className="bg-white py-10 lg:py-20">
+          <ContentGrid 
+            // id="destinations"
+            title="Our Award-Winning Destinations"
+            subtitle="Explore Mulia"
+            description="From the white sands of Nusa Dua to the vibrant heart of Jakarta, discover luxury that knows no bounds."
+            centered
+          >
+            {destinations.map((dest) => (
+              <Card key={dest.title} {...dest} />
+            ))}
+          </ContentGrid>
+        </div>
 
-      {/* Experience Section Placeholder */}
-      <div className="bg-brand-bg-secondary w-full py-20 lg:py-32">
-        <ContentGrid 
-          title="Culinary Journeys"
-          subtitle="Dining at Mulia"
-          description="Savor world-class flavors across our diverse range of restaurants and lounges."
-          centered
-        >
-          {dining.map((item) => (
-            <Card key={item.title} {...item} />
-          ))}
-        </ContentGrid>
-      </div>
-      
-      {/* Additional sections would go here */}
+        {/* Experience Section Placeholder */}
+        <div className="bg-brand-bg-secondary w-full py-20 lg:py-32">
+          <ContentGrid 
+            title="Culinary Journeys"
+            subtitle="Dining at Mulia"
+            description="Savor world-class flavors across our diverse range of restaurants and lounges."
+            centered
+          >
+            {dining.map((item) => (
+              <Card key={item.title} {...item} />
+            ))}
+          </ContentGrid>
+        </div>
+        
+        {/* Additional sections would go here */}
+      </section>
     </div>
   );
 }
