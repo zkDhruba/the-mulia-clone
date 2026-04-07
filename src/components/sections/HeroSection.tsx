@@ -20,6 +20,8 @@ interface HeroProps {
   secondaryCtaText?: string;
   secondaryCtaHref?: string;
   fullHeight?: boolean;
+  showBackground?: boolean;
+  showContent?: boolean;
 }
 
 export const HeroSection: React.FC<HeroProps> = ({
@@ -32,72 +34,77 @@ export const HeroSection: React.FC<HeroProps> = ({
   ctaHref = "#",
   secondaryCtaText,
   secondaryCtaHref,
-  fullHeight = true,
+  showBackground = true,
+  showContent = true,
 }) => {
   return (
     <section className={cn(
       "relative w-full h-full overflow-hidden flex items-center justify-center pt-24",
     )}>
       {/* Background Layer */}
-      <div className="absolute inset-0 z-0">
-        <ImageWrapper 
-          src={image} 
-          alt={title} 
-          fill 
-          priority
-          className="object-cover" 
-        />
-        <div 
-          className="absolute inset-0 bg-black" 
-          style={{ opacity: overlayOpacity / 100 }}
-        />
-        {/* Visual Overlays (Gradient/Fade like in original) */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/40" />
-      </div>
+      {showBackground && (
+        <div className="absolute inset-0 z-0">
+          <ImageWrapper 
+            src={image} 
+            alt={title} 
+            fill 
+            priority
+            className="object-cover" 
+          />
+          <div 
+            className="absolute inset-0 bg-black" 
+            style={{ opacity: overlayOpacity / 100 }}
+          />
+          {/* Visual Overlays (Gradient/Fade like in original) */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/40" />
+        </div>
+      )}
 
-      <Container className="relative z-10 text-center text-white">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className="max-w-4xl mx-auto space-y-6 lg:space-y-8"
-        >
-          {subtitle && (
-            <motion.span
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.3, duration: 0.8 }}
-              className="block text-sm lg:text-base uppercase tracking-[0.3em] font-semibold text-brand-sage mb-4"
-            >
-              {subtitle}
-            </motion.span>
-          )}
-
-          <Heading as="h1" variant="display" className="text-white">
-            {title}
-          </Heading>
-
-          {description && (
-            <Text variant="lead" className="text-white/80 max-w-2xl mx-auto mt-6">
-              {description}
-            </Text>
-          )}
-
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-8">
-            <Button size="lg" href={ctaHref}>
-              {ctaText}
-            </Button>
-            {secondaryCtaText && (
-              <Button size="lg" variant="outline" href={secondaryCtaHref} className="text-white border-white hover:bg-white hover:text-brand-dark">
-                {secondaryCtaText}
-              </Button>
+      {showContent && (
+        <Container className="relative z-10 text-center text-white">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="max-w-4xl mx-auto space-y-6 lg:space-y-8"
+          >
+            {subtitle && (
+              <motion.span
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.3, duration: 0.8 }}
+                className="block text-sm lg:text-base uppercase tracking-[0.3em] font-semibold text-brand-sage mb-4"
+              >
+                {subtitle}
+              </motion.span>
             )}
-          </div>
-        </motion.div>
-      </Container>
+
+            <Heading as="h1" variant="display" className="text-white">
+              {title}
+            </Heading>
+
+            {description && (
+              <Text variant="lead" className="text-white/80 max-w-2xl mx-auto mt-6">
+                {description}
+              </Text>
+            )}
+
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-8">
+              <Button size="lg" href={ctaHref}>
+                {ctaText}
+              </Button>
+              {secondaryCtaText && (
+                <Button size="lg" variant="outline" href={secondaryCtaHref} className="text-white border-white hover:bg-white hover:text-brand-dark">
+                  {secondaryCtaText}
+                </Button>
+              )}
+            </div>
+          </motion.div>
+        </Container>
+      )}
 
       {/* Hero Navigation/Divider (Optional) */}
-      <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-black/60 to-transparent pointer-events-none" />
+      {showBackground && <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-black/60 to-transparent pointer-events-none" />}
     </section>
   );
 };

@@ -58,14 +58,25 @@ export default function Home() {
   return (
     <div className="relative w-full">
       {/* 
-        Sticky Hero Layer:
-        -sticky top-0 pins it to the viewport.
-        -h-screen makes it fill the view.
-        --z-10 ensures it stays behind the main content.
+        1. STATIC BACKGROUND LAYER:
+        This stays pinned at the top.
       */}
       <div className="sticky top-0 h-screen w-full -z-10 overflow-hidden">
+        <HeroSection 
+          showContent={false}
+          image="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=2070&auto=format&fit=crop"
+        />
+      </div>
+
+      {/* 
+        2. SCROLLING CONTENT LAYER:
+        This layer contains the Hero Navbar and Text. 
+        It scrolls normally, making the navbar and text move UP during scroll.
+      */}
+      <div className="relative h-screen w-full z-0 -mt-[100vh]">
         <NavbarHero />
         <HeroSection 
+          showBackground={false}
           title="Extraordinary Luxury Awaits"
           subtitle="Mulia Hotels & Resorts"
           description="Indulge in a world of refined elegance and exceptional service in Bali and Jakarta."
@@ -76,9 +87,8 @@ export default function Home() {
       </div>
 
       {/* 
-        Main Content Layer:
-        -relative z-20 pulls it above the sticky hero.
-        -bg-white (or any opaque background) ensures it covers the hero as you scroll.
+        3. MAIN CONTENT LAYER:
+        This section eventually covers both the image and the hero text area.
       */}
       <section className="relative z-20 bg-white">
         {/* NavbarMain becomes sticky when it reaches the top, seamlessly replacing NavbarHero */}
