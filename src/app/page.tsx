@@ -64,7 +64,7 @@ export default function Home() {
       <div className="sticky top-0 h-screen w-full -z-10 overflow-hidden">
         <HeroSection 
           showContent={false}
-          image="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=2070&auto=format&fit=crop"
+          image="/images/hero-image.webp"
         />
       </div>
 

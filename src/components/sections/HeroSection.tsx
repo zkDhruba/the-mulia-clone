@@ -29,7 +29,7 @@ export const HeroSection: React.FC<HeroProps> = ({
   subtitle = "Experience the Extraordinary",
   description = "Book directly on our website for exclusive rates and special offers on business or leisure stays in Jakarta and Bali.",
   image,
-  overlayOpacity = 40,
+  overlayOpacity = 10,
   ctaText = "Check Availability",
   ctaHref = "#",
   secondaryCtaText,
