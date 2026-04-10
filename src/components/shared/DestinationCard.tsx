@@ -17,7 +17,7 @@ export const DestinationCard: React.FC<CardProps> = ({
   return (
     <div className={cn('group flex flex-col space-y-6', className)}>
       {/* Image Container */}
-      <div className="relative aspect-[3/2] overflow-hidden rounded-sm">
+      <div className="relative aspect-[3/2] lg:aspect-square lg:w-[668px] lg:h-[668px] overflow-hidden rounded-sm mx-auto">
         <ImageWrapper 
           src={image} 
           alt={title || ''} 
@@ -26,9 +26,9 @@ export const DestinationCard: React.FC<CardProps> = ({
       </div>
       
       {/* Content */}
-      <div className="flex flex-col space-y-3 lg:space-y-4 pr-4">
+      <div className="flex flex-col space-y-3 lg:space-y-4 lg:w-[668px] mx-auto">
         {tag && (
-          <span className="text-[10px] lg:text-[11px] font-bold uppercase tracking-[0.3em] text-brand-dark/60">
+          <span className="text-[10px] lg:text-[11px] font-manrope font-bold uppercase tracking-[0.3em] text-brand-dark/60">
             {tag}
           </span>
         )}
@@ -37,7 +37,7 @@ export const DestinationCard: React.FC<CardProps> = ({
           {title}
         </h3>
         
-        <p className="text-sm lg:text-sm text-text-muted leading-relaxed max-w-lg">
+        <p className="text-sm lg:text-sm text-text-muted leading-relaxed">
           {description}
         </p>
         
