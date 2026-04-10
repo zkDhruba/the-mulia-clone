@@ -25,7 +25,7 @@ export const DestinationsSection: React.FC<DestinationsSectionProps> = ({ destin
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 lg:gap-20 items-start">
           {/* Left Column: Context Text */}
           <div className="lg:col-span-1 pt-2 lg:pt-4">
-            <p className="text-sm lg:text-base leading-relaxed text-text-muted tracking-wide max-w-[280px]">
+            <p className="text-sm lg:text-base font-manrope font-normal leading-relaxed text-text-muted tracking-wide max-w-[280px]">
               At Mulia Hotels, we celebrate life&apos;s finest moments with timeless luxury. Our exquisite accommodations and world-class facilities ensure memorable experiences, embodying elegance, comfort, and refinement, making every stay truly extraordinary.
             </p>
           </div>

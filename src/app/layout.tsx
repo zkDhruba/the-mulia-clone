@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Playfair_Display } from "next/font/google";
+import { Inter, Playfair_Display, Manrope } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 import { Footer } from "@/components/layout/Footer";
@@ -13,6 +13,11 @@ const inter = Inter({
 
 const playfair = Playfair_Display({
   variable: "--font-serif",
+  subsets: ["latin"],
+});
+
+const manrope = Manrope({
+  variable: "--font-manrope",
   subsets: ["latin"],
 });
 
@@ -44,7 +49,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${playfair.variable} ${orticaLinear.variable} antialiased font-sans`}>
+      <body className={`${inter.variable} ${playfair.variable} ${manrope.variable} ${orticaLinear.variable} antialiased font-sans`}>
         <SmoothScroll>
           <main>{children}</main>
           <Footer />
