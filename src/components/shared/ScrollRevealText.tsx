@@ -14,7 +14,7 @@ export const ScrollRevealText: React.FC<ScrollRevealTextProps> = ({ text, classN
   
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ["start 0.9", "start 0.2"],
+    offset: ["start 0.85", "start 0.45"],
   });
 
   const smoothProgress = useSpring(scrollYProgress, {
