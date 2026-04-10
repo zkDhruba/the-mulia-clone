@@ -83,7 +83,7 @@ export const NavbarHero: React.FC = () => {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: '100%' }}
             transition={{ duration: 0.4, ease: 'easeInOut' }}
-            className="fixed inset-0 z-40 bg-white flex flex-col pt-24"
+            className="fixed inset-0 z-40 bg-background flex flex-col pt-24"
           >
             <nav className="flex flex-col items-center space-y-6 pt-12">
               {navLinks.map((link) => (

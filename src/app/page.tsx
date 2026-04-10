@@ -90,17 +90,17 @@ export default function Home() {
         3. MAIN CONTENT LAYER:
         This section eventually covers both the image and the hero text area.
       */}
-      <section className="relative z-20 bg-white">
+      <section className="relative z-20 bg-background">
         {/* NavbarMain becomes sticky when it reaches the top, seamlessly replacing NavbarHero */}
         <NavbarMain />
         
         {/* Booking Bar */}
-        <div className="relative z-20 w-full bg-white pt-4 lg:pt-8 shadow-sm">
+        <div className="relative z-20 w-full bg-background pt-4 lg:pt-8 shadow-sm">
           <BookingBar />
         </div>
 
         {/* Destinations Grid */}
-        <div className="bg-white py-10 lg:py-20">
+        <div className="bg-background py-10 lg:py-20">
           <ContentGrid 
             // id="destinations"
             title="Our Award-Winning Destinations"
@@ -115,7 +115,7 @@ export default function Home() {
         </div>
 
         {/* Experience Section Placeholder */}
-        <div className="bg-brand-bg-secondary w-full py-20 lg:py-32">
+        <div className="bg-background w-full py-20 lg:py-32">
           <ContentGrid 
             title="Culinary Journeys"
             subtitle="Dining at Mulia"

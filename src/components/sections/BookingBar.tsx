@@ -8,7 +8,7 @@ import { cn } from '@/lib/utils';
 export const BookingBar: React.FC<{ className?: string }> = ({ className }) => {
   return (
     <div className={cn(
-      "w-full bg-white/95 backdrop-blur-md shadow-2xl py-6 lg:py-8 border-y border-brand-sage/20",
+      "w-full bg-background/95 backdrop-blur-md shadow-2xl py-6 lg:py-8 border-y border-brand-sage/20",
       className
     )}>
       <Container>

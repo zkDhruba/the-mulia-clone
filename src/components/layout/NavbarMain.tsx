@@ -22,7 +22,7 @@ export const NavbarMain: React.FC = () => {
 
   return (
     <>
-      <header className="sticky top-0 left-0 right-0 z-50 bg-white shadow-sm py-2 transition-all duration-300">
+      <header className="sticky top-0 left-0 right-0 z-50 bg-background shadow-sm py-2 transition-all duration-300">
         <Container className="flex items-center justify-between">
           <Link href="/" className="relative z-50">
             <span className="text-2xl font-bold uppercase tracking-widest text-brand-dark transition-colors duration-300">
@@ -83,7 +83,7 @@ export const NavbarMain: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: '-100%' }}
             transition={{ duration: 0.4, ease: 'easeInOut' }}
-            className="fixed inset-0 top-[60px] z-40 bg-white flex flex-col"
+            className="fixed inset-0 top-[60px] z-40 bg-background flex flex-col"
           >
             <nav className="flex flex-col items-center space-y-6 pt-12">
               {navLinks.map((link) => (

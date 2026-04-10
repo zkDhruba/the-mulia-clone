@@ -17,7 +17,7 @@ export const Card: React.FC<CardProps> = ({
 }) => {
   const CardContent = (
     <div className={cn(
-      'group flex flex-col h-full bg-white transition-all duration-500 hover:shadow-xl rounded-lg overflow-hidden',
+      'group flex flex-col h-full bg-transparent transition-all duration-500 hover:shadow-xl rounded-lg overflow-hidden',
       className
     )}>
       <div className="relative aspect-[4/3] overflow-hidden">
