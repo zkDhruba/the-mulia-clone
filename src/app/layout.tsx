@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import { Footer } from "@/components/layout/Footer";
 
@@ -15,6 +16,22 @@ const playfair = Playfair_Display({
   subsets: ["latin"],
 });
 
+const orticaLinear = localFont({
+  src: [
+    {
+      path: "./fonts/OrticaLinear-Light.woff2",
+      weight: "300",
+      style: "normal",
+    },
+    {
+      path: "./fonts/OrticaLinear-Regular.woff2",
+      weight: "400",
+      style: "normal",
+    },
+  ],
+  variable: "--font-ortica",
+});
+
 export const metadata: Metadata = {
   title: "Award-Winning Mulia Hotels | Luxury Stays in Bali and Jakarta",
   description: "Experience the ultimate luxury at Mulia Hotels & Resorts. Book directly for exclusive rates in Bali and Jakarta.",
@@ -27,7 +44,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${playfair.variable} antialiased font-sans`}>
+      <body className={`${inter.variable} ${playfair.variable} ${orticaLinear.variable} antialiased font-sans`}>
         <SmoothScroll>
           <main>{children}</main>
           <Footer />

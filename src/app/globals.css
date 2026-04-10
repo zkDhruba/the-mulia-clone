@@ -20,6 +20,7 @@
   --spacing-global: 2rem;
   
   --font-serif: var(--font-serif);
+  --font-ortica: var(--font-ortica);
 }
 
 @layer base {
