@@ -1,36 +1,12 @@
 import React from 'react';
 import { HeroSection } from "@/components/sections/HeroSection";
-import { BookingBar } from "@/components/sections/BookingBar";
+import { HeaderPremium } from "@/components/layout/HeaderPremium";
+import { DestinationsSection } from "@/components/sections/DestinationsSection";
+import { NavbarHero } from "@/components/layout/NavbarHero";
 import { ContentGrid } from "@/components/sections/ContentGrid";
 import { Card } from "@/components/shared/Card";
-import { NavbarHero } from "@/components/layout/NavbarHero";
-import { NavbarMain } from "@/components/layout/NavbarMain";
 
 export default function Home() {
-  const destinations = [
-    {
-      title: "Mulia Bali",
-      description: "Nusa Dua's most stunning beachfront resort featuring The Mulia, Mulia Resort & Mulia Villas.",
-      image: "https://images.unsplash.com/photo-1573843225102-0ca084c6d46d?q=80&w=2070&auto=format&fit=crop",
-      tag: "Bali",
-      href: "/bali"
-    },
-    {
-      title: "Hotel Mulia Jakarta",
-      description: "Sophisticated luxury in the heart of Jakarta's business district with world-class dining.",
-      image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=2070&auto=format&fit=crop",
-      tag: "Jakarta",
-      href: "/jakarta"
-    },
-    {
-      title: "Mulia Villas",
-      description: "Private pathways lead to exclusive villas with private pools and personalized butler service.",
-      image: "https://images.unsplash.com/photo-1582719508461-905c673771fd?q=80&w=2070&auto=format&fit=crop",
-      tag: "Luxury",
-      href: "/villas"
-    }
-  ];
-
   const dining = [
     {
       title: "Soleil",
@@ -91,28 +67,26 @@ export default function Home() {
         This section eventually covers both the image and the hero text area.
       */}
       <section className="relative z-20 bg-background">
-        {/* NavbarMain becomes sticky when it reaches the top, seamlessly replacing NavbarHero */}
-        <NavbarMain />
-        
-        {/* Booking Bar */}
-        <div className="relative z-20 w-full bg-background pt-4 lg:pt-8 shadow-sm">
-          <BookingBar />
-        </div>
+        {/* HeaderPremium provides the integrated booking and nav experience seen in the reference images */}
+        <HeaderPremium />
 
-        {/* Destinations Grid */}
-        <div className="bg-background py-10 lg:py-20">
-          <ContentGrid 
-            // id="destinations"
-            title="Our Award-Winning Destinations"
-            subtitle="Explore Mulia"
-            description="From the white sands of Nusa Dua to the vibrant heart of Jakarta, discover luxury that knows no bounds."
-            centered
-          >
-            {destinations.map((dest) => (
-              <Card key={dest.title} {...dest} />
-            ))}
-          </ContentGrid>
-        </div>
+        {/* destinations Section */}
+        <DestinationsSection destinations={[
+          {
+            title: "Hotel Mulia Senayan & The Suites",
+            description: "Opened in 1997 and rising 40 storeys high, Hotel Mulia Senayan stands as one of Jakarta's iconic luxury hotel. Offering two distinct experiences, Hotel Mulia is perfect for business and leisure, while The Suites, with dedicated butler service, prioritise privacy.",
+            image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=2070&auto=format&fit=crop",
+            tag: "SENAYAN, JAKARTA",
+            href: "/jakarta"
+          },
+          {
+            title: "The Mulia, Mulia Resort & Villas",
+            description: "Discover Bali's first integrated destination, where three unique resorts await. Enjoy beachfront luxury at The Mulia, serene all-villa sanctuaries at Mulia Villas, and vibrant entertainment at Mulia Resort, all within one exclusive compound.",
+            image: "https://images.unsplash.com/photo-1573843225102-0ca084c6d46d?q=80&w=2070&auto=format&fit=crop",
+            tag: "NUSA DUA, BALI",
+            href: "/bali"
+          }
+        ]} />
 
         {/* Experience Section Placeholder */}
         <div className="bg-background w-full py-20 lg:py-32">
