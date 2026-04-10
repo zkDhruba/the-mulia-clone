@@ -3,6 +3,7 @@
 import React from 'react';
 import { Container } from '@/components/layout/Container';
 import { DestinationCard } from '@/components/shared/DestinationCard';
+import { ScrollRevealText } from '@/components/shared/ScrollRevealText';
 
 interface Destination {
   title: string;
@@ -29,11 +30,12 @@ export const DestinationsSection: React.FC<DestinationsSectionProps> = ({ destin
             </p>
           </div>
           
-          {/* Right Column: Hero Statement */}
+          {/* Right Column: Hero Statement with Scroll Reveal Effect */}
           <div className="lg:col-span-3">
-            <h2 className="text-4xl md:text-5xl lg:text-7xl font-serif text-brand-dark leading-[1.05] lg:max-w-4xl tracking-tight">
-              Mulia Hotels, since 1997, has set a new standard for refined luxury. From Jakarta to Bali, our properties, including Hotel Mulia Senayan and Mulia Bali, invite guests to experience glamour luxury.
-            </h2>
+            <ScrollRevealText 
+              className="text-4xl md:text-5xl lg:text-7xl font-serif leading-[1.05] lg:max-w-4xl tracking-tight"
+              text="Mulia Hotels, since 1997, has set a new standard for refined luxury. From Jakarta to Bali, our properties, including Hotel Mulia Senayan and Mulia Bali, invite guests to experience glamour luxury."
+            />
           </div>
         </div>
       </Container>

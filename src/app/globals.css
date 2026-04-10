@@ -52,3 +52,12 @@ html.lenis body {
 .lenis.lenis-scrolling iframe {
   pointer-events: none;
 }
+
+/* Luxury Utilities */
+.text-gradient-gold {
+  color: #9C8343; /* Fallback for browsers that don't support text-fill-color */
+  background: linear-gradient(135deg, #9C8343 0%, #C4B998 50%, #EBE5D3 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
