@@ -2,6 +2,7 @@ import React from 'react';
 import { HeroSection } from "@/components/sections/HeroSection";
 import { HeaderPremium } from "@/components/layout/HeaderPremium";
 import { DestinationsSection } from "@/components/sections/DestinationsSection";
+import { EventsSection } from "@/components/sections/EventsSection";
 import { NavbarHero } from "@/components/layout/NavbarHero";
 import { ContentGrid } from "@/components/sections/ContentGrid";
 import { Card } from "@/components/shared/Card";
@@ -87,6 +88,9 @@ export default function Home() {
             href: "/bali"
           }
         ]} />
+
+        {/* Events Section */}
+        <EventsSection />
 
         {/* Experience Section Placeholder */}
         <div className="bg-background w-full py-20 lg:py-32">
