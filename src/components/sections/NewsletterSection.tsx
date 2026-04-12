@@ -24,16 +24,16 @@ export const NewsletterSection: React.FC = () => {
   };
 
   return (
-    <section className="mt-16 relative w-full py-16 lg:py-24 overflow-hidden flex items-center min-h-[500px]">
+    <section className="mt-20 relative w-full py-12 lg:py-16 overflow-hidden flex items-center min-h-[400px]">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <ImageWrapper 
           src="/images/form.jpg" 
           alt="Mulia Newsletter" 
           fill 
-          className="object-cover"
+          className="object-cover object-[85%_60%]"
         />
-        <div className="absolute inset-0 bg-black/45 z-10" />
+        <div className="absolute inset-0 bg-black/30 z-10" />
       </div>
 
       <Container className="relative z-20">
