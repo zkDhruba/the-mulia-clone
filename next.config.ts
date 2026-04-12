@@ -1,5 +1,12 @@
-const nextConfig = {
+import type { NextConfig } from "next";
+
+const nextConfig: NextConfig = {
+  output: 'export',
+  basePath: '/the-mulia-clone',
+  assetPrefix: '/the-mulia-clone',
+  trailingSlash: true,
   images: {
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: "https",
@@ -9,4 +16,4 @@ const nextConfig = {
   },
 };
 
-module.exports = nextConfig;
+export default nextConfig;
