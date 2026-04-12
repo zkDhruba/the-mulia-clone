@@ -3,6 +3,7 @@
 import React, { useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { Container } from '@/components/layout/Container';
+import { withBase } from '@/lib/basePath';
 
 const SocialIcon: React.FC<{ href: string; label: string; children: React.ReactNode }> = ({ href, label, children }) => (
   <Link 
@@ -48,16 +49,16 @@ export const Footer: React.FC = () => {
                 <div>
                   <span className="text-[10px] font-manrope font-bold uppercase tracking-[0.2em] text-brand-dark block mb-3">Hotels</span>
                   <nav className="flex flex-col space-y-1">
-                    <Link href="/bali/the-mulia" className="text-[11px] font-manrope text-brand-dark hover:text-brand-dark/60 transition-colors">The Mulia</Link>
-                    <Link href="/bali/resort" className="text-[11px] font-manrope text-brand-dark hover:text-brand-dark/60 transition-colors">Mulia Resort</Link>
-                    <Link href="/bali/villas" className="text-[11px] font-manrope text-brand-dark hover:text-brand-dark/60 transition-colors">Mulia Villas</Link>
+                    <Link href={withBase("/bali/the-mulia")} className="text-[11px] font-manrope text-brand-dark hover:text-brand-dark/60 transition-colors">The Mulia</Link>
+                    <Link href={withBase("/bali/resort")} className="text-[11px] font-manrope text-brand-dark hover:text-brand-dark/60 transition-colors">Mulia Resort</Link>
+                    <Link href={withBase("/bali/villas")} className="text-[11px] font-manrope text-brand-dark hover:text-brand-dark/60 transition-colors">Mulia Villas</Link>
                   </nav>
                 </div>
                 
                 <div className="flex flex-col space-y-2 mt-8">
-                  <Link href="/bali/weddings" className="text-[10px] font-manrope font-bold uppercase tracking-[0.2em] text-brand-dark">Weddings</Link>
-                  <Link href="/bali/meetings" className="text-[10px] font-manrope font-bold uppercase tracking-[0.2em] text-brand-dark">Meetings</Link>
-                  <Link href="/bali/dining" className="text-[10px] font-manrope font-bold uppercase tracking-[0.2em] text-brand-dark">Dining</Link>
+                  <Link href={withBase("/bali/weddings")} className="text-[10px] font-manrope font-bold uppercase tracking-[0.2em] text-brand-dark">Weddings</Link>
+                  <Link href={withBase("/bali/meetings")} className="text-[10px] font-manrope font-bold uppercase tracking-[0.2em] text-brand-dark">Meetings</Link>
+                  <Link href={withBase("/bali/dining")} className="text-[10px] font-manrope font-bold uppercase tracking-[0.2em] text-brand-dark">Dining</Link>
                 </div>
               </div>
 
@@ -105,15 +106,15 @@ export const Footer: React.FC = () => {
                 <div>
                   <span className="text-[10px] font-manrope font-bold uppercase tracking-[0.2em] text-brand-dark block mb-3">Hotels</span>
                   <nav className="flex flex-col space-y-1">
-                    <Link href="/jakarta/hotel-mulia" className="text-[11px] font-manrope text-brand-dark hover:text-brand-dark/60 transition-colors">Hotel Mulia</Link>
-                    <Link href="/jakarta/the-suites" className="text-[11px] font-manrope text-brand-dark hover:text-brand-dark/60 transition-colors">The Suites</Link>
+                    <Link href={withBase("/jakarta/hotel-mulia")} className="text-[11px] font-manrope text-brand-dark hover:text-brand-dark/60 transition-colors">Hotel Mulia</Link>
+                    <Link href={withBase("/jakarta/the-suites")} className="text-[11px] font-manrope text-brand-dark hover:text-brand-dark/60 transition-colors">The Suites</Link>
                   </nav>
                 </div>
                 
                 <div className="flex flex-col space-y-2 mt-8 focus-visible:">
-                  <Link href="/jakarta/weddings" className="text-[10px] font-manrope font-bold uppercase tracking-[0.2em] text-brand-dark">Weddings</Link>
-                  <Link href="/jakarta/meetings" className="text-[10px] font-manrope font-bold uppercase tracking-[0.2em] text-brand-dark">Meetings</Link>
-                  <Link href="/jakarta/dining" className="text-[10px] font-manrope font-bold uppercase tracking-[0.2em] text-brand-dark">Dining</Link>
+                  <Link href={withBase("/jakarta/weddings")} className="text-[10px] font-manrope font-bold uppercase tracking-[0.2em] text-brand-dark">Weddings</Link>
+                  <Link href={withBase("/jakarta/meetings")} className="text-[10px] font-manrope font-bold uppercase tracking-[0.2em] text-brand-dark">Meetings</Link>
+                  <Link href={withBase("/jakarta/dining")} className="text-[10px] font-manrope font-bold uppercase tracking-[0.2em] text-brand-dark">Dining</Link>
                 </div>
               </div>
 
@@ -149,13 +150,13 @@ export const Footer: React.FC = () => {
           {/* Right Links Column */}
           <div className="lg:col-span-2 lg:text-right">
             <nav className="flex flex-col space-y-2 pt-1">
-              <Link href="/privileges" className="text-[10px] font-manrope font-bold uppercase tracking-[0.2em] text-[#5a6e3c] hover:text-brand-dark transition-colors">Mulia Privileges</Link>
-              <Link href="/gift" className="text-[10px] font-manrope font-bold uppercase tracking-[0.2em] text-brand-dark hover:text-brand-dark/60 transition-colors">Mulia Gift</Link>
-              <Link href="/blog" className="text-[10px] font-manrope font-bold uppercase tracking-[0.2em] text-brand-dark hover:text-brand-dark/60 transition-colors">Blog</Link>
-              <Link href="/careers" className="text-[10px] font-manrope font-bold uppercase tracking-[0.2em] text-brand-dark hover:text-brand-dark/60 transition-colors">Careers</Link>
-              <Link href="/gds" className="text-[10px] font-manrope font-bold uppercase tracking-[0.2em] text-brand-dark hover:text-brand-dark/60 transition-colors">GDS</Link>
-              <Link href="/contact" className="text-[10px] font-manrope font-bold uppercase tracking-[0.2em] text-[#c4883a] hover:text-brand-dark transition-colors">Contact Us</Link>
-              <Link href="/awards" className="text-[10px] font-manrope font-bold uppercase tracking-[0.2em] text-brand-dark hover:text-brand-dark/60 transition-colors">Awards</Link>
+              <Link href={withBase("/privileges")} className="text-[10px] font-manrope font-bold uppercase tracking-[0.2em] text-[#5a6e3c] hover:text-brand-dark transition-colors">Mulia Privileges</Link>
+              <Link href={withBase("/gift")} className="text-[10px) font-manrope font-bold uppercase tracking-[0.2em] text-brand-dark hover:text-brand-dark/60 transition-colors">Mulia Gift</Link>
+              <Link href={withBase("/blog")} className="text-[10px] font-manrope font-bold uppercase tracking-[0.2em] text-brand-dark hover:text-brand-dark/60 transition-colors">Blog</Link>
+              <Link href={withBase("/careers")} className="text-[10px] font-manrope font-bold uppercase tracking-[0.2em] text-brand-dark hover:text-brand-dark/60 transition-colors">Careers</Link>
+              <Link href={withBase("/gds")} className="text-[10px] font-manrope font-bold uppercase tracking-[0.2em] text-brand-dark hover:text-brand-dark/60 transition-colors">GDS</Link>
+              <Link href={withBase("/contact")} className="text-[10px] font-manrope font-bold uppercase tracking-[0.2em] text-[#c4883a] hover:text-brand-dark transition-colors">Contact Us</Link>
+              <Link href={withBase("/awards")} className="text-[10px] font-manrope font-bold uppercase tracking-[0.2em] text-brand-dark hover:text-brand-dark/60 transition-colors">Awards</Link>
             </nav>
           </div>
 

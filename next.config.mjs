@@ -2,7 +2,6 @@
 const nextConfig = {
   output: 'export',
   basePath: '/the-mulia-clone',
-  assetPrefix: '/the-mulia-clone',
   trailingSlash: true,
   images: {
     unoptimized: true,

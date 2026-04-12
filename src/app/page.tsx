@@ -10,6 +10,7 @@ import { Card } from "@/components/shared/Card";
 import { PlanningGridSection2 } from '@/components/sections/PlanningGridSection2';
 import { DiningHeroSection } from '@/components/sections/DiningHeroSection';
 import { NewsletterSection } from '@/components/sections/NewsletterSection';
+import { withBase } from '@/lib/basePath';
 
 export default function Home() {
   const dining = [
@@ -45,7 +46,7 @@ export default function Home() {
       <div className="sticky top-0 h-screen w-full -z-10 overflow-hidden">
         <HeroSection 
           showContent={false}
-          image="/images/hero-image.webp"
+          image={withBase("/images/hero-image.webp")}
         />
       </div>
 
@@ -80,16 +81,16 @@ export default function Home() {
           {
             title: "Hotel Mulia Senayan & The Suites",
             description: "Opened in 1997 and rising 40 storeys high, Hotel Mulia Senayan stands as one of Jakarta's iconic luxury hotel. Offering two distinct experiences, Hotel Mulia is perfect for business and leisure, while The Suites, with dedicated butler service, prioritise privacy.",
-            image: "/images/destination1.webp",
+            image: withBase("/images/destination1.webp"),
             tag: "SENAYAN, JAKARTA",
-            href: "/jakarta"
+            href: withBase("/jakarta")
           },
           {
             title: "The Mulia, Mulia Resort & Villas",
             description: "Discover Bali's first integrated destination, where three unique resorts await. Enjoy beachfront luxury at The Mulia, serene all-villa sanctuaries at Mulia Villas, and vibrant entertainment at Mulia Resort, all within one exclusive compound.",
-            image: "/images/destination2.webp",
+            image: withBase("/images/destination2.webp"),
             tag: "NUSA DUA, BALI",
-            href: "/bali"
+            href: withBase("/bali")
           }
         ]} />
 

@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { cn } from '@/lib/utils';
 import { CardProps } from '@/types';
 import { ImageWrapper } from '@/components/shared/ImageWrapper';
+import { withBase } from '@/lib/basePath';
 
 export const DestinationCard: React.FC<CardProps> = ({ 
   image, 
@@ -43,7 +44,7 @@ export const DestinationCard: React.FC<CardProps> = ({
         
         {href && (
           <Link 
-            href={href} 
+            href={withBase(href)} 
             className="inline-flex items-center space-x-3 text-[10px] lg:text-[11px] font-bold uppercase tracking-[0.25em] text-brand-dark group/link pt-2"
           >
             <span>Explore</span>

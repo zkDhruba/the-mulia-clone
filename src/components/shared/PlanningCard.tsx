@@ -3,6 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { ImageWrapper } from '@/components/shared/ImageWrapper';
+import { withBase } from '@/lib/basePath';
 
 interface PlanningCardProps {
   label: string;
@@ -45,7 +46,7 @@ export const PlanningCard: React.FC<PlanningCardProps> = ({
         </p>
         
         <Link 
-          href={href} 
+          href={withBase(href)} 
           className="inline-flex items-center space-x-4 text-[12px] font-manrope font-bold uppercase tracking-[0.2em] text-brand-dark group/link pt-2"
         >
           <span>Explore</span>

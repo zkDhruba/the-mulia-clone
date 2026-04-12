@@ -7,14 +7,16 @@ import { Container } from '@/components/layout/Container';
 import { Button } from '@/components/shared/Button';
 import { cn } from '@/lib/utils';
 
+import { withBase } from '@/lib/basePath';
+
 const navLinks = [
-  { label: 'Bali', href: '/bali' },
-  { label: 'Jakarta', href: '/jakarta' },
-  { label: 'The Mulia', href: '/the-mulia' },
-  { label: 'Resort', href: '/resort' },
-  { label: 'Villas', href: '/villas' },
-  { label: 'Dining', href: '/dining' },
-  { label: 'Offers', href: '/offers' },
+  { label: 'Bali', href: withBase('/bali') },
+  { label: 'Jakarta', href: withBase('/jakarta') },
+  { label: 'The Mulia', href: withBase('/the-mulia') },
+  { label: 'Resort', href: withBase('/resort') },
+  { label: 'Villas', href: withBase('/villas') },
+  { label: 'Dining', href: withBase('/dining') },
+  { label: 'Offers', href: withBase('/offers') },
 ];
 
 export const NavbarHero: React.FC = () => {

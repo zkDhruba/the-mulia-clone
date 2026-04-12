@@ -1,6 +1,7 @@
 import React from 'react';
 import Image, { ImageProps } from 'next/image';
 import { cn } from '@/lib/utils';
+import { withBase } from '@/lib/basePath';
 
 interface ImageWrapperProps extends Omit<ImageProps, 'src'> {
   src?: string;
@@ -34,7 +35,7 @@ export const ImageWrapper: React.FC<ImageWrapperProps> = ({
       className
     )}>
       <Image
-        src={src || placeholderImg}
+        src={withBase(src || placeholderImg)}
         alt={alt}
         fill={fill}
         className={cn(

@@ -4,7 +4,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Container } from '@/components/layout/Container';
 import { ImageWrapper } from '@/components/shared/ImageWrapper';
-import Link from 'next/link';
+import { withBase } from '@/lib/basePath';
 
 export const DiningHeroSection: React.FC = () => {
   return (
@@ -12,7 +12,7 @@ export const DiningHeroSection: React.FC = () => {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <ImageWrapper 
-          src="/images/dining.webp" 
+          src={withBase("/images/dining.webp")} 
           alt="Mulia Dining" 
           fill 
           priority
@@ -68,13 +68,13 @@ export const DiningHeroSection: React.FC = () => {
             className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-6"
           >
             <Link 
-              href="/dining/bali"
+              href={withBase("/dining/bali")}
               className="px-10 py-3.5 rounded-full bg-white text-brand-alocasia text-xs font-manrope font-bold uppercase tracking-widest transition-all duration-300 hover:bg-white/20 hover:text-white hover:backdrop-blur-md border border-transparent hover:border-white/30"
             >
               Bali Restaurants
             </Link>
             <Link 
-              href="/dining/jakarta"
+              href={withBase("/dining/jakarta")}
               className="px-10 py-3.5 rounded-full bg-white text-brand-alocasia text-xs font-manrope font-bold uppercase tracking-widest transition-all duration-300 hover:bg-white/20 hover:text-white hover:backdrop-blur-md border border-transparent hover:border-white/30"
             >
               Jakarta Restaurants

@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { Container } from '@/components/layout/Container';
 import { cn } from '@/lib/utils';
 import { motion, AnimatePresence } from 'framer-motion';
+import { withBase } from '@/lib/basePath';
 
 export const HeaderPremium: React.FC = () => {
   const [selectedProperty, setSelectedProperty] = useState("The Mulia");
@@ -17,7 +18,7 @@ export const HeaderPremium: React.FC = () => {
         <div className="flex items-center justify-between h-20 lg:h-24">
           
           {/* Logo Area */}
-          <Link href="/" className="flex-shrink-0 mr-8 lg:mr-12">
+          <Link href={withBase("/")} className="flex-shrink-0 mr-8 lg:mr-12">
             <img 
               src="https://cdn.prod.website-files.com/6624ff6a5db57a668993dd4c/6628d4f8c1482560a4868fb4_Logo%20Gradient.svg" 
               alt="Mulia Logo" 
