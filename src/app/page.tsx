@@ -7,6 +7,7 @@ import { PlanningGridSection } from "@/components/sections/PlanningGridSection";
 import { NavbarHero } from "@/components/layout/NavbarHero";
 import { ContentGrid } from "@/components/sections/ContentGrid";
 import { Card } from "@/components/shared/Card";
+import { PlanningGridSection2 } from '@/components/sections/PlanningGridSection2';
 
 export default function Home() {
   const dining = [
@@ -93,8 +94,11 @@ export default function Home() {
         {/* Events Section */}
         <EventsSection />
 
-        {/* Planning Section */}
+        {/* Planning Section 1 */}
         <PlanningGridSection />
+
+        {/* Planning Section 2 */}
+        <PlanningGridSection2 />
 
         {/* Experience Section Placeholder */}
         <div className="bg-background w-full py-20 lg:py-32">

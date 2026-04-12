@@ -10,14 +10,14 @@ export const PlanningGridSection: React.FC = () => {
       label: "Weddings",
       title: "Say 'Yes' at Mulia Bali",
       description: "For those seeking pure elegance, The Mulia, Mulia Resort & Villas - Nusa Dua, Bali offers glamorous wedding settings. Choose from three chapels, two ballrooms, and eight dining venues. Our dedicated team personalises every detail, from floral arrangements to custom cakes, ensuring your dream wedding comes true.",
-      image: "/images/plan-wedding-bali1.webp",
+      image: "/images/planning-bali-1.webp",
       href: "/weddings"
     },
     {
       label: "Meetings",
       title: "Built For World Leaders",
       description: "From Heads of State discussions to corporate retreats and social gatherings, Mulia Bali offers an unparalleled meeting experience. Our beachfront resort boasts state-of-the-art facilities and versatile spaces, meticulously designed to accommodate any event.",
-      image: "/images/plan-wedding-bali2.webp",
+      image: "/images/planning-bali-2.webp",
       href: "/meetings"
     }
   ];
@@ -32,16 +32,16 @@ export const PlanningGridSection: React.FC = () => {
           </h2>
 
           {/* Grid Area */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-16 lg:gap-x-16 items-stretch">
-            {/* Weddings - 1/3 width */}
-            <div className="lg:col-span-1">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-2 gap-y-16 lg:gap-x-6 items-stretch">
+            {/* Weddings - 2/3 width */}
+            <div className="lg:col-span-2">
               <PlanningCard 
                 {...plans[0]}
               />
             </div>
 
-            {/* Meetings - 2/3 width */}
-            <div className="lg:col-span-2">
+            {/* Meetings - 1/3 width */}
+            <div className="lg:col-span-1">
               <PlanningCard 
                 {...plans[1]}
               />
