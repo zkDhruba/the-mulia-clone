@@ -22,7 +22,7 @@ export const PlanningCard: React.FC<PlanningCardProps> = ({
   return (
     <div className="group flex flex-col space-y-6">
       {/* Image Container */}
-      <div className="relative h-[300px] md:h-[400px] lg:h-[450px] overflow-hidden rounded-sm">
+      <div className="relative h-[300px] md:h-[400px] lg:h-[400px] overflow-hidden rounded-sm">
         <ImageWrapper 
           src={image} 
           alt={title} 
