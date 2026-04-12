@@ -9,6 +9,7 @@ import { ContentGrid } from "@/components/sections/ContentGrid";
 import { Card } from "@/components/shared/Card";
 import { PlanningGridSection2 } from '@/components/sections/PlanningGridSection2';
 import { DiningHeroSection } from '@/components/sections/DiningHeroSection';
+import { NewsletterSection } from '@/components/sections/NewsletterSection';
 
 export default function Home() {
   const dining = [
@@ -103,6 +104,9 @@ export default function Home() {
 
         {/* Dining Hero Section */}
         <DiningHeroSection />
+
+        {/* Newsletter Section */}
+        <NewsletterSection />
         
         {/* Additional sections would go here */}
       </section>
