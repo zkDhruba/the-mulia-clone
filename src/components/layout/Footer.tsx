@@ -39,7 +39,7 @@ export const Footer: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-0">
 
           {/* Bali Section */}
-          <div className="lg:col-span-5 border-r border-brand-dark/10 pr-8 lg:pr-12">
+          <div className="lg:col-span-5 border-r border-[#c1c193] pr-8 lg:pr-12">
             <h3 className="text-2xl font-ortica text-brand-dark mb-10">Bali</h3>
             
             <div className="grid grid-cols-2 gap-8">
@@ -96,7 +96,7 @@ export const Footer: React.FC = () => {
           </div>
 
           {/* Jakarta Section */}
-          <div className="lg:col-span-5 border-r border-brand-dark/10 pr-8 lg:px-12">
+          <div className="lg:col-span-5 border-r border-[#c1c193] pr-8 lg:px-12">
             <h3 className="text-2xl font-ortica text-brand-dark mb-10">Jakarta</h3>
             
             <div className="grid grid-cols-2 gap-8">
@@ -162,10 +162,10 @@ export const Footer: React.FC = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-brand-dark/10 py-6 mt-12 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className="border-t border-[#c1c193] py-6 mt-12 flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="flex items-center gap-4">
             {/* Small Mulia logo variant */}
-            <div className="w-8 h-8 rounded-full border border-brand-dark/10 flex items-center justify-center text-[10px] font-serif text-brand-dark/40">
+            <div className="w-8 h-8 rounded-full border border-[#c1c193] flex items-center justify-center text-[10px] font-serif text-brand-dark/40">
               M
             </div>
             <span className="text-[10px] font-manrope text-brand-dark/40 tracking-wide">
