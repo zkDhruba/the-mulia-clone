@@ -8,7 +8,7 @@ import Link from 'next/link';
 
 export const DiningHeroSection: React.FC = () => {
   return (
-    <section className="relative w-full h-[600px] lg:h-[80vh] min-h-[500px] max-h-[800px] overflow-hidden flex items-center justify-center">
+    <section className="relative w-full h-[700px] lg:h-screen min-h-[600px] overflow-hidden flex items-center justify-center">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <ImageWrapper 
