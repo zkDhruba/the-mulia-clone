@@ -4,6 +4,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Container } from '@/components/layout/Container';
 import { ImageWrapper } from '@/components/shared/ImageWrapper';
+import Link from 'next/link';
 import { withBase } from '@/lib/basePath';
 
 export const DiningHeroSection: React.FC = () => {
