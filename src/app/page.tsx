@@ -8,6 +8,7 @@ import { NavbarHero } from "@/components/layout/NavbarHero";
 import { ContentGrid } from "@/components/sections/ContentGrid";
 import { Card } from "@/components/shared/Card";
 import { PlanningGridSection2 } from '@/components/sections/PlanningGridSection2';
+import { DiningHeroSection } from '@/components/sections/DiningHeroSection';
 
 export default function Home() {
   const dining = [
@@ -100,19 +101,8 @@ export default function Home() {
         {/* Planning Section 2 */}
         <PlanningGridSection2 />
 
-        {/* Experience Section Placeholder */}
-        <div className="bg-background w-full py-20 lg:py-32">
-          <ContentGrid 
-            title="Culinary Journeys"
-            subtitle="Dining at Mulia"
-            description="Savor world-class flavors across our diverse range of restaurants and lounges."
-            centered
-          >
-            {dining.map((item) => (
-              <Card key={item.title} {...item} />
-            ))}
-          </ContentGrid>
-        </div>
+        {/* Dining Hero Section */}
+        <DiningHeroSection />
         
         {/* Additional sections would go here */}
       </section>
