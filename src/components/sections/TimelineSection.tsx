@@ -133,7 +133,7 @@ export const TimelineSection: React.FC = () => {
               
               {/* Active Progress Line (Driven by scroll) */}
               <motion.div 
-                className="absolute left-0 top-0 h-full bg-[#162721] origin-left"
+                className="absolute left-0 top-0 w-full h-full bg-[#162721] origin-left"
                 style={{ scaleX: scrollYProgress }}
               />
             </div>
