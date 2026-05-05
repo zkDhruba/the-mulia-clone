@@ -124,34 +124,35 @@ export const TimelineSection: React.FC = () => {
         </Container>
 
         {/* Timeline Progress Bar Area */}
-        <div className="w-full max-w-xl mx-auto pb-24 px-8 md:px-16 relative">
-          
-          {/* Progress Lines Container */}
-          <div className="absolute top-1/2 left-8 right-8 md:left-16 md:right-16 h-[1px] -translate-y-1/2 z-0">
-            {/* Background Line */}
-            <div className="absolute inset-0 bg-[#e0e0e0] w-full h-full" />
-            
-            {/* Active Progress Line (Driven by scroll) */}
-            <motion.div 
-              className="absolute left-0 top-0 h-full bg-[#162721] origin-left"
-              style={{ scaleX: scrollYProgress }}
-            />
-          </div>
+        <div className="w-full max-w-xl mx-auto pb-24 px-8 md:px-16">
+          <div className="relative w-full">
+            {/* Progress Lines Container */}
+            <div className="absolute top-1/2 left-[7px] right-[7px] h-[1px] -translate-y-1/2 z-0">
+              {/* Background Line */}
+              <div className="absolute inset-0 bg-[#e0e0e0] w-full h-full" />
+              
+              {/* Active Progress Line (Driven by scroll) */}
+              <motion.div 
+                className="absolute left-0 top-0 h-full bg-[#162721] origin-left"
+                style={{ scaleX: scrollYProgress }}
+              />
+            </div>
 
-          {/* Dots Container */}
-          <div className="relative z-10 flex justify-between items-center w-full">
-            {steps.map((_, i) => (
-              <div key={i} className="flex flex-col items-center">
-                <div 
-                  className={cn(
-                    "w-[14px] h-[14px] rounded-full border-[1.5px] transition-colors duration-500",
-                    i <= activeStep 
-                      ? "bg-[#162721] border-[#162721]" 
-                      : "bg-[#fbfbfb] border-[#162721]"
-                  )}
-                />
-              </div>
-            ))}
+            {/* Dots Container */}
+            <div className="relative z-10 flex justify-between items-center w-full">
+              {steps.map((_, i) => (
+                <div key={i} className="flex flex-col items-center">
+                  <div 
+                    className={cn(
+                      "w-[14px] h-[14px] rounded-full border-[1.5px] transition-colors duration-500",
+                      i <= activeStep 
+                        ? "bg-[#162721] border-[#162721]" 
+                        : "bg-[#fbfbfb] border-[#162721]"
+                    )}
+                  />
+                </div>
+              ))}
+            </div>
           </div>
 
           {/* Start/Finish Labels */}
