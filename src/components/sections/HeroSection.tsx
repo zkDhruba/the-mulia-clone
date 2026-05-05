@@ -3,108 +3,103 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Container } from '@/components/layout/Container';
-import { Heading } from '@/components/shared/Heading';
-import { Text } from '@/components/shared/Text';
-import { Button } from '@/components/shared/Button';
 import { ImageWrapper } from '@/components/shared/ImageWrapper';
 import { cn } from '@/lib/utils';
+import Link from 'next/link';
 
 interface HeroProps {
-  title?: string;
-  subtitle?: string;
-  description?: string;
   image?: string;
   overlayOpacity?: number;
-  ctaText?: string;
-  ctaHref?: string;
-  secondaryCtaText?: string;
-  secondaryCtaHref?: string;
-  fullHeight?: boolean;
   showBackground?: boolean;
   showContent?: boolean;
 }
 
+const navButtons = [
+  { label: "What We Do", href: "#" },
+  { label: "Why Choose Us", href: "#" },
+  { label: "Why Bali", href: "#" },
+  { label: "About Us", href: "#" },
+  { label: "Contact Us", href: "#" },
+];
+
 export const HeroSection: React.FC<HeroProps> = ({
-  title = "Award-Winning Luxury Hotels",
-  subtitle = "Experience the Extraordinary",
-  description = "Book directly on our website for exclusive rates and special offers on business or leisure stays in Jakarta and Bali.",
   image,
-  overlayOpacity = 10,
-  ctaText = "Check Availability",
-  ctaHref = "#",
-  secondaryCtaText,
-  secondaryCtaHref,
+  overlayOpacity = 20,
   showBackground = true,
   showContent = true,
 }) => {
   return (
-    <section className={cn(
-      "relative w-full h-full overflow-hidden flex items-center justify-center pt-24",
-    )}>
+    <section className="relative w-full h-screen overflow-hidden">
       {/* Background Layer */}
       {showBackground && (
         <div className="absolute inset-0 z-0">
           <ImageWrapper 
             src={image} 
-            alt={title} 
+            alt="Hero Background" 
             fill 
             priority
             className="object-cover" 
           />
           <div 
-            className="absolute inset-0 bg-black" 
+            className="absolute inset-0 bg-black/20" 
             style={{ opacity: overlayOpacity / 100 }}
           />
-          {/* Visual Overlays (Gradient/Fade like in original) */}
-          <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/40" />
+          {/* Visual Overlays */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/20" />
         </div>
       )}
 
       {showContent && (
-        <Container className="relative z-10 text-center text-white">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
+        <Container className="relative z-10 flex flex-col h-full items-center text-white">
+          {/* Top Navigation Buttons - Positioned manually from top */}
+          <motion.div 
+            initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            className="max-w-4xl mx-auto space-y-6 lg:space-y-8"
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="mt-24 lg:mt-32 flex flex-wrap justify-center gap-3 lg:gap-4 w-full"
           >
-            {subtitle && (
-              <motion.span
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.3, duration: 0.8 }}
-                className="block text-sm lg:text-base uppercase tracking-[0.3em] font-semibold text-brand-sage mb-4"
+            {navButtons.map((btn, index) => (
+              <Link
+                key={index}
+                href={btn.href}
+                className="px-8 py-2.5 border border-white/80 rounded-2xl text-[10px] lg:text-[12px] font-manrope font-bold uppercase tracking-[0.15em] hover:bg-white hover:text-brand-dark transition-all duration-300 backdrop-blur-[2px]"
               >
-                {subtitle}
-              </motion.span>
-            )}
+                {btn.label}
+              </Link>
+            ))}
+          </motion.div>
 
-            <Heading as="h1" variant="display" className="text-white">
-              {title}
-            </Heading>
+          {/* Centered Logo and Subtitle - Centered in the screen */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.98 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1.2, ease: "easeOut" }}
+            className="flex-1 flex flex-col items-center justify-center -mt-10 lg:-mt-20"
+          >
+            <h1 className="text-[5rem] md:text-[8rem] lg:text-[12rem] font-ortica font-light tracking-[-0.02em] leading-none mb-1">
+              RAWASI
+            </h1>
+            <p className="text-[10px] md:text-sm lg:text-base font-manrope font-light uppercase tracking-[0.5em] text-white/95">
+              PROPERTY DEVELOPMENT
+            </p>
+          </motion.div>
 
-            {description && (
-              <Text variant="lead" className="text-white/80 max-w-2xl mx-auto mt-6">
-                {description}
-              </Text>
-            )}
-
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-8">
-              <Button size="lg" href={ctaHref}>
-                {ctaText}
-              </Button>
-              {secondaryCtaText && (
-                <Button size="lg" variant="outline" href={secondaryCtaHref} className="text-white border-white hover:bg-white hover:text-brand-dark">
-                  {secondaryCtaText}
-                </Button>
-              )}
-            </div>
+          {/* Bottom CTA - Positioned from bottom */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="mb-32 lg:mb-40"
+          >
+            <Link
+              href="#learn-more"
+              className="px-14 py-4 bg-white text-[#4a3a2a] rounded-sm text-[10px] lg:text-[12px] font-manrope font-bold uppercase tracking-[0.25em] hover:bg-white/95 transition-all duration-300 shadow-2xl"
+            >
+              LEARN MORE
+            </Link>
           </motion.div>
         </Container>
       )}
-
-      {/* Hero Navigation/Divider (Optional) */}
-      {showBackground && <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-black/60 to-transparent pointer-events-none" />}
     </section>
   );
 };

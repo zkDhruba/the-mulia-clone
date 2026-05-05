@@ -46,25 +46,18 @@ export default function Home() {
       <div className="sticky top-0 h-screen w-full -z-10 overflow-hidden">
         <HeroSection 
           showContent={false}
-          image={withBase("/images/hero-image.webp")}
+          image={withBase("/images/hero_real_bg_1.jpg")}
         />
       </div>
 
       {/* 
         2. SCROLLING CONTENT LAYER:
-        This layer contains the Hero Navbar and Text. 
-        It scrolls normally, making the navbar and text move UP during scroll.
+        This layer contains the Hero Nav and Logo. 
+        It scrolls normally, making the content move UP during scroll.
       */}
       <div className="relative h-screen w-full z-0 -mt-[100vh]">
-        <NavbarHero />
         <HeroSection 
           showBackground={false}
-          title="Extraordinary Luxury Awaits"
-          subtitle="Mulia Hotels & Resorts"
-          description="Indulge in a world of refined elegance and exceptional service in Bali and Jakarta."
-          ctaText="Book Your Stay"
-          secondaryCtaText="Explore Destinations"
-          secondaryCtaHref="#destinations"
         />
       </div>
 
