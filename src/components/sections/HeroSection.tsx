@@ -56,13 +56,13 @@ export const HeroSection: React.FC<HeroProps> = ({
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="mt-24 lg:mt-32 flex flex-wrap justify-center gap-3 lg:gap-4 w-full"
+            className="mt-24 lg:mt-32 flex flex-wrap justify-center gap-4 lg:gap-6 w-full"
           >
             {navButtons.map((btn, index) => (
               <Link
                 key={index}
                 href={btn.href}
-                className="px-8 py-2.5 border border-white/80 rounded-2xl text-[10px] lg:text-[12px] font-manrope font-bold uppercase tracking-[0.15em] hover:bg-white hover:text-brand-dark transition-all duration-300 backdrop-blur-[2px]"
+                className="px-8 py-2.5 border border-white rounded-xl text-[14px] lg:text-[16px] font-manrope font-bold uppercase tracking-[0.15em] hover:bg-white hover:text-black transition-all duration-300 backdrop-blur-[2px]"
               >
                 {btn.label}
               </Link>
@@ -79,7 +79,7 @@ export const HeroSection: React.FC<HeroProps> = ({
             <h1 className="text-[5rem] md:text-[8rem] lg:text-[12rem] font-ortica font-light tracking-[-0.02em] leading-none mb-1">
               RAWASI
             </h1>
-            <p className="text-[10px] md:text-sm lg:text-base font-manrope font-light uppercase tracking-[0.5em] text-white/95">
+            <p className="text-base md:text-lg lg:text-2xl font-manrope font-light uppercase tracking-[0.5em] text-white/95">
               PROPERTY DEVELOPMENT
             </p>
           </motion.div>
@@ -93,7 +93,7 @@ export const HeroSection: React.FC<HeroProps> = ({
           >
             <Link
               href="#learn-more"
-              className="px-14 py-4 bg-white text-[#4a3a2a] rounded-sm text-[10px] lg:text-[12px] font-manrope font-bold uppercase tracking-[0.25em] hover:bg-white/95 transition-all duration-300 shadow-2xl"
+              className="px-14 py-4 bg-white text-[#4a3a2a] text-[10px] lg:text-[12px] font-manrope font-bold uppercase tracking-[0.25em] hover:bg-olive-600/95 hover:text-white transition-all duration-300 shadow-2xl"
             >
               LEARN MORE
             </Link>
