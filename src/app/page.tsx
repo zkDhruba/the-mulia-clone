@@ -10,6 +10,7 @@ import { Card } from "@/components/shared/Card";
 import { PlanningGridSection2 } from '@/components/sections/PlanningGridSection2';
 import { DiningHeroSection } from '@/components/sections/DiningHeroSection';
 import { NewsletterSection } from '@/components/sections/NewsletterSection';
+import { TimelineSection } from '@/components/sections/TimelineSection';
 import { withBase } from '@/lib/basePath';
 
 export default function Home() {
@@ -65,7 +66,10 @@ export default function Home() {
         3. MAIN CONTENT LAYER:
         This section eventually covers both the image and the hero text area.
       */}
-      <section className="relative z-20 bg-background">
+      <section className="relative z-20 bg-[#fbfbfb]">
+        {/* Timeline Process Section */}
+        <TimelineSection />
+
         {/* HeaderPremium provides the integrated booking and nav experience seen in the reference images */}
         <HeaderPremium />
 
