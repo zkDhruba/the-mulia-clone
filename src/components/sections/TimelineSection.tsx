@@ -73,14 +73,15 @@ export const TimelineSection: React.FC = () => {
   });
 
   // Intro fades out and moves up slightly
-  const introOpacity = useTransform(scrollYProgress, [0, 0.15], [1, 0]);
-  const introY = useTransform(scrollYProgress, [0, 0.15], ["0vh", "-10vh"]);
+  // Using [0, 0.05, 0.15, 1] ensures a "dead zone" at the start so opacity is 1, and forces it to stay at 0 after 0.15.
+  const introOpacity = useTransform(scrollYProgress, [0, 0.05, 0.15, 1], [1, 1, 0, 0]);
+  const introY = useTransform(scrollYProgress, [0, 0.05, 0.15, 1], ["0vh", "0vh", "-10vh", "-10vh"]);
 
   // Timeline starts pushed down (25vh), and moves up to center (0vh) as intro fades
-  const timelineY = useTransform(scrollYProgress, [0, 0.15], ["25vh", "0vh"]);
+  const timelineY = useTransform(scrollYProgress, [0, 0.05, 0.15, 1], ["25vh", "25vh", "0vh", "0vh"]);
 
   // Timeline progress bar starts fading in as it moves up, to avoid jarring sliding from bottom edge
-  const progressBarOpacity = useTransform(scrollYProgress, [0, 0.15], [0, 1]);
+  const progressBarOpacity = useTransform(scrollYProgress, [0, 0.05, 0.15, 1], [0, 0, 1, 1]);
 
   // Progress line scales after the initial positioning phase
   const progressLineScaleX = useTransform(scrollYProgress, [0.15, 1], [0, 1]);
