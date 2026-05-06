@@ -15,51 +15,71 @@ const steps = [
       </svg>
     ),
     title: "Our Model",
-    subtitle: "FOUNDATION & VISION",
-    description: "We identify land opportunity, shape the vision, and structure the project foundation—ensuring the development is positioned for long-term success."
+    description: [] // No description for Tab 1 as requested
   },
   {
     icon: (
       <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M12 19l7-7 3 3-7 7-3-3z"/>
-        <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/>
-        <path d="M2 2l7.586 7.586"/>
-        <circle cx="11" cy="11" r="2"/>
+        <path d="M20 19.5v.5a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8.5L18 5.5"/>
+        <path d="M8 18h1"/>
+        <path d="M18.42 9.61a2.1 2.1 0 1 1 2.97 2.97L16.95 17 13 18l.99-3.95 4.43-4.44Z"/>
       </svg>
     ),
-    title: "We Design",
-    subtitle: "ARCHITECTURE & PLANNING",
-    description: "Our architectural team crafts innovative and sustainable designs that harmonize with the environment while maximizing aesthetic appeal and functional utility."
+    title: "We Buy",
+    description: [
+      "-We source below-market land opportunities",
+      "-Focus on high-growth markets",
+      "-Ensure the best entry points for success."
+    ]
   },
   {
     icon: (
       <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
-        <rect x="4" y="2" width="16" height="20" rx="2" ry="2"/>
-        <path d="M9 22v-4h6v4"/>
-        <path d="M8 6h.01"/>
-        <path d="M16 6h.01"/>
-        <path d="M12 6h.01"/>
-        <path d="M12 10h.01"/>
-        <path d="M12 14h.01"/>
-        <path d="M16 10h.01"/>
-        <path d="M16 14h.01"/>
-        <path d="M8 10h.01"/>
-        <path d="M8 14h.01"/>
+        <path d="M3 18h18"/>
+        <path d="M19 14h-4"/>
+        <path d="M15 14v-4a2 2 0 0 0-2-2h-3L8 14"/>
+        <path d="M8 14H4v4"/>
+        <circle cx="7" cy="18" r="2"/>
+        <circle cx="17" cy="18" r="2"/>
       </svg>
     ),
     title: "We Build",
-    subtitle: "CONSTRUCTION & EXECUTION",
-    description: "With rigorous project management and premium materials, we bring the vision to life, ensuring quality construction and timely delivery."
+    description: [
+      "We manage every project from start to finish",
+      "Our development team maintain strict control over:",
+      "quality, timelines, and budget"
+    ]
   },
   {
     icon: (
       <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="m21 2-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"/>
+        <path d="m11 17 2 2a1 1 0 1 0 3-3"/>
+        <path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4"/>
+        <path d="m21 3-6 6"/>
+        <path d="m21 14-6-6"/>
       </svg>
     ),
-    title: "We Manage",
-    subtitle: "OPERATIONS & HANDOVER",
-    description: "We provide comprehensive property management services to ensure your investment maintains its value and delivers exceptional experiences to residents."
+    title: "We Sell",
+    description: [
+      "We handle sales and marketing entirely in-house",
+      "Ensure every property reaches the right buyers at the right price",
+      "with seamless legal completion from offer to transfer."
+    ]
+  },
+  {
+    icon: (
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
+        <circle cx="8" cy="8" r="6"/>
+        <path d="M18.09 10.37A6 6 0 1 1 10.34 18"/>
+        <path d="M7 6h1v4"/>
+        <path d="m16.71 13.88.49-.22a2 2 0 0 0 1.2-1.74l-.2-1.2a2 2 0 0 0-1.74-1.2l-.5-.08a2 2 0 0 1-1.74-1.2l-.2-1.2a2 2 0 0 1 1.2-1.74l.49-.22"/>
+      </svg>
+    ),
+    title: "You Earn",
+    description: [
+      "We structure every project around one outcome. Your return.",
+      "We put investors first"
+    ]
   }
 ];
 
@@ -73,26 +93,27 @@ export const TimelineSection: React.FC = () => {
   });
 
   // Intro fades out and moves up slightly
-  // Using [0, 0.05, 0.1, 1] ensures a small "dead zone" at the start, followed by a fast fade-out.
-  const introOpacity = useTransform(scrollYProgress, [0, 0.1, 0.15, 1], [1, 1, 0, 0]);
-  const introY = useTransform(scrollYProgress, [0, 0.05, 0.1, 1], ["0vh", "0vh", "-10vh", "-10vh"]);
+  // Using [0, 0.10, 0.30, 1] ensures a dead zone at the start (10%), followed by a long, 
+  // smooth 20% transition where the fade-out and movement are perfectly synchronized.
+  const introOpacity = useTransform(scrollYProgress, [0, 0.10, 0.30, 1], [1, 1, 0, 0]);
+  const introY = useTransform(scrollYProgress, [0, 0.10, 0.30, 1], ["0vh", "0vh", "-10vh", "-10vh"]);
 
   // Timeline starts pushed down (25vh), and moves up to center (0vh) as intro fades
-  const timelineY = useTransform(scrollYProgress, [0, 0.05, 0.1, 1], ["25vh", "25vh", "0vh", "0vh"]);
+  const timelineY = useTransform(scrollYProgress, [0, 0.10, 0.30, 1], ["25vh", "25vh", "0vh", "0vh"]);
 
-  // Timeline progress bar starts fading in as it moves up, to avoid jarring sliding from bottom edge
-  const progressBarOpacity = useTransform(scrollYProgress, [0, 0.05, 0.1, 1], [0, 0, 1, 1]);
+  // Timeline progress bar starts fading in as it moves up
+  const progressBarOpacity = useTransform(scrollYProgress, [0, 0.10, 0.30, 1], [0, 0, 1, 1]);
 
   // Progress line scales after the initial positioning phase
-  const progressLineScaleX = useTransform(scrollYProgress, [0.1, 1], [0, 1]);
+  const progressLineScaleX = useTransform(scrollYProgress, [0.30, 1], [0, 1]);
 
   useMotionValueEvent(scrollYProgress, "change", (latest) => {
-    // Only start changing steps AFTER the intro phase (latest > 0.10)
-    if (latest <= 0.10) {
+    // Only start changing steps AFTER the synchronized intro phase (latest > 0.30)
+    if (latest <= 0.30) {
       if (activeStep !== 0) setActiveStep(0);
     } else {
-      // Remaining 90% of scroll is split evenly among the 4 steps
-      const progressInTimeline = (latest - 0.10) / 0.90;
+      // Remaining 70% of scroll is split evenly among the 5 steps
+      const progressInTimeline = (latest - 0.30) / 0.70;
       const step = Math.min(Math.floor(progressInTimeline * steps.length), steps.length - 1);
       if (step !== activeStep && step >= 0) {
         setActiveStep(step);
@@ -133,7 +154,7 @@ export const TimelineSection: React.FC = () => {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -15 }}
                 transition={{ duration: 0.5, ease: "easeInOut" }}
-                className="flex flex-col items-center"
+                className="flex flex-col items-center w-full"
               >
                 {/* Icon */}
                 <div className="mb-4 text-[#5a4033]">
@@ -141,9 +162,20 @@ export const TimelineSection: React.FC = () => {
                 </div>
 
                 {/* Title */}
-                <h2 className="text-4xl md:text-5xl lg:text-[3.5rem] font-ortica font-light text-[#5a4033] mb-5 tracking-tight">
+                <h2 className="text-4xl md:text-5xl lg:text-[3.5rem] font-ortica font-light text-[#5a4033] mb-8 tracking-tight">
                   {steps[activeStep].title}
                 </h2>
+
+                {/* Description */}
+                {steps[activeStep].description && steps[activeStep].description.length > 0 && (
+                  <div className="flex flex-col items-center space-y-2">
+                    {steps[activeStep].description.map((line, index) => (
+                      <p key={index} className="text-[17px] md:text-[19px] font-serif italic text-[#5a4033] max-w-2xl mx-auto text-center leading-relaxed">
+                        {line}
+                      </p>
+                    ))}
+                  </div>
+                )}
               </motion.div>
             </AnimatePresence>
           </Container>
@@ -201,4 +233,3 @@ export const TimelineSection: React.FC = () => {
     </section>
   );
 };
-
