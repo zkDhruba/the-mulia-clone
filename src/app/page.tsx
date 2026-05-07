@@ -11,6 +11,7 @@ import { PlanningGridSection2 } from '@/components/sections/PlanningGridSection2
 import { DiningHeroSection } from '@/components/sections/DiningHeroSection';
 import { NewsletterSection } from '@/components/sections/NewsletterSection';
 import { TimelineSection } from '@/components/sections/TimelineSection';
+import { WhyChooseUsSection } from '@/components/sections/WhyChooseUsSection';
 import { withBase } from '@/lib/basePath';
 
 export default function Home() {
@@ -67,8 +68,11 @@ export default function Home() {
         This section eventually covers both the image and the hero text area.
       */}
       <section className="relative z-20 bg-[#fbfbfb]">
-        {/* Timeline Process Section */}
+        {/* Timeline Process Section: What We Do */}
         <TimelineSection />
+
+        {/* Timeline Process Section: Why Choose Us */}
+        <WhyChooseUsSection />
 
         {/* HeaderPremium provides the integrated booking and nav experience seen in the reference images */}
         <HeaderPremium />
