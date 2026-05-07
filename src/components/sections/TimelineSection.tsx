@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { motion, useScroll, useMotionValueEvent, AnimatePresence, useTransform } from 'framer-motion';
 import { Container } from '@/components/layout/Container';
 import { cn } from '@/lib/utils';
@@ -86,6 +86,11 @@ const steps = [
 export const TimelineSection: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const [activeStep, setActiveStep] = useState(0);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -95,7 +100,7 @@ export const TimelineSection: React.FC = () => {
   // Intro fades out and moves up slightly
   // Using [0, 0.10, 0.30, 1] ensures a dead zone at the start (10%), followed by a long, 
   // smooth 20% transition where the fade-out and movement are perfectly synchronized.
-  const introOpacity = useTransform(scrollYProgress, [0, 0.15, 0.2, 1], [1, 1, 0, 0]);
+  const introOpacity = useTransform(scrollYProgress, [0, 0.15, 0.25, 1], [1, 1, 0, 0]);
   const introY = useTransform(scrollYProgress, [0, 0.10, 0.30, 1], ["0vh", "0vh", "-10vh", "-10vh"]);
 
   // Timeline starts pushed down (25vh), and moves up to center (0vh) as intro fades
@@ -126,20 +131,7 @@ export const TimelineSection: React.FC = () => {
       {/* Sticky Container */}
       <div className="sticky top-0 h-screen w-full flex flex-col items-center justify-center overflow-hidden">
         
-        {/* Intro Section: What We Do */}
-        <motion.div 
-          className="absolute top-[18%] left-0 right-0 flex flex-col items-center px-4 text-center pointer-events-none"
-          style={{ opacity: introOpacity, y: introY }}
-        >
-          <h2 className="text-5xl md:text-6xl lg:text-[4.5rem] font-ortica font-light text-[#5a4033] mb-6 tracking-tight">
-            What We Do
-          </h2>
-          <p className="text-lg md:text-xl lg:text-[1.35rem] font-serif italic text-[#5a4033] max-w-3xl leading-[1.6]">
-            A proven, end-to-end process built to protect your capital<br className="hidden md:block"/>
-            keep you completely passive<br className="hidden md:block"/>
-            and deliver on every metric
-          </p>
-        </motion.div>
+
 
         {/* Timeline Content Area */}
         <motion.div 
@@ -227,6 +219,25 @@ export const TimelineSection: React.FC = () => {
               <span className="text-[9px] font-serif text-[#a8a39a] uppercase tracking-widest translate-x-[20%]">Finish</span>
             </div>
           </motion.div>
+        </motion.div>
+
+        {/* Intro Section: What We Do */}
+        <motion.div 
+          className="absolute top-[18%] left-0 right-0 z-50 flex flex-col items-center px-4 text-center pointer-events-none"
+          suppressHydrationWarning
+          style={{ 
+            opacity: mounted ? introOpacity : 1, 
+            y: mounted ? introY : "0vh" 
+          }}
+        >
+          <h2 className="text-5xl md:text-6xl lg:text-[4.5rem] font-ortica font-light text-[#5a4033] mb-6 tracking-tight">
+            What We Do
+          </h2>
+          <p className="text-lg md:text-xl lg:text-[1.35rem] font-serif italic text-[#5a4033] max-w-3xl leading-[1.6]">
+            A proven, end-to-end process built to protect your capital<br className="hidden md:block"/>
+            keep you completely passive<br className="hidden md:block"/>
+            and deliver on every metric
+          </p>
         </motion.div>
 
       </div>

@@ -204,6 +204,7 @@ export const WhyChooseUsSection: React.FC = () => {
         {/* Intro Section: Why Choose Us */}
         <motion.div 
           className="absolute top-[18%] left-0 right-0 z-50 flex flex-col items-center px-4 text-center pointer-events-none"
+          suppressHydrationWarning
           style={{ 
             opacity: mounted ? introOpacity : 1, 
             y: mounted ? introY : "0vh" 
