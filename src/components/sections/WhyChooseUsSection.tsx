@@ -2,7 +2,6 @@
 
 import React, { useRef, useState } from 'react';
 import { motion, useScroll, useMotionValueEvent, AnimatePresence, useTransform } from 'framer-motion';
-import { Container } from '@/components/layout/Container';
 import { cn } from '@/lib/utils';
 
 const whySteps = [
@@ -77,9 +76,7 @@ export const WhyChooseUsSection: React.FC = () => {
   });
 
   // Intro fades out and moves up slightly
-  // Using [0, 0.10, 0.30, 1] ensures a dead zone at the start (10%), followed by a long, 
-  // smooth 20% transition where the fade-out and movement are perfectly synchronized.
-  const introOpacity = useTransform(scrollYProgress, [0, 0.15, 0.2, 1], [1, 1, 0, 0]);
+  const introOpacity = useTransform(scrollYProgress, [0, 0.15, 0.25, 1], [1, 1, 0, 0]);
   const introY = useTransform(scrollYProgress, [0, 0.10, 0.30, 1], ["0vh", "0vh", "-10vh", "-10vh"]);
 
   // Timeline starts pushed down (25vh), and moves up to center (0vh) as intro fades
@@ -110,28 +107,12 @@ export const WhyChooseUsSection: React.FC = () => {
       {/* Sticky Container */}
       <div className="sticky top-0 h-screen w-full flex flex-col items-center justify-center overflow-hidden">
         
-        {/* Intro Section: What We Do */}
+        {/* Timeline Content Area - LOWER Z-INDEX */}
         <motion.div 
-          className="absolute top-[18%] left-0 right-0 flex flex-col items-center px-4 text-center pointer-events-none"
-          style={{ opacity: introOpacity, y: introY }}
-        >
-          <h2 className="text-5xl md:text-6xl lg:text-[4.5rem] font-ortica font-light text-[#5a4033] mb-6 tracking-tight">
-            Why Choose Us
-          </h2>
-          <p className="text-lg md:text-xl lg:text-[1.35rem] font-serif italic text-[#5a4033] max-w-3xl leading-[1.6]">
-            We do things a little differently.
-          </p>
-          <p className="text-lg md:text-xl lg:text-[1.35rem] font-serif italic text-[#5a4033] max-w-3xl leading-[1.6]">
-            Here’s how we work.
-          </p>
-        </motion.div>
-
-        {/* Timeline Content Area */}
-        <motion.div 
-          className="absolute inset-0 flex flex-col pointer-events-auto"
+          className="absolute inset-0 z-10 flex flex-col pointer-events-auto"
           style={{ y: timelineY }}
         >
-          <Container className="flex-1 flex flex-col items-center justify-center w-full px-4 text-center max-w-2xl mx-auto pt-10">
+          <div className="flex-1 flex flex-col items-center justify-center w-full px-4 text-center max-w-2xl mx-auto pt-10">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeStep}
@@ -163,7 +144,7 @@ export const WhyChooseUsSection: React.FC = () => {
                 )}
               </motion.div>
             </AnimatePresence>
-          </Container>
+          </div>
 
           {/* Timeline Progress Bar Area */}
           <motion.div 
@@ -212,6 +193,22 @@ export const WhyChooseUsSection: React.FC = () => {
               <span className="text-[9px] font-serif text-[#a8a39a] uppercase tracking-widest translate-x-[20%]">Finish</span>
             </div>
           </motion.div>
+        </motion.div>
+
+        {/* Intro Section: Why Choose Us - Moved to end and using z-[60] */}
+        <motion.div 
+          className="absolute inset-0 z-[60] flex flex-col items-center pt-[18vh] px-4 text-center pointer-events-none"
+          style={{ opacity: introOpacity, y: introY }}
+        >
+          <h2 className="text-5xl md:text-6xl lg:text-[4.5rem] font-ortica font-light text-[#5a4033] mb-6 tracking-tight">
+            Why Choose Us
+          </h2>
+          <p className="text-lg md:text-xl lg:text-[1.35rem] font-serif italic text-[#5a4033] max-w-3xl leading-[1.6]">
+            We do things a little differently.
+          </p>
+          <p className="text-lg md:text-xl lg:text-[1.35rem] font-serif italic text-[#5a4033] max-w-3xl leading-[1.6]">
+            Here&apos;s how we work.
+          </p>
         </motion.div>
 
       </div>
