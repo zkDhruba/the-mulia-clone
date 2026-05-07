@@ -47,7 +47,7 @@ export const NewsletterSection: React.FC = () => {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-ortica text-white leading-[1.1] tracking-tight max-w-md">
-              Sign Up for Exclusive Mulia Updates
+              Sign Up for Exclusive Updates
             </h2>
           </motion.div>
 

@@ -12,6 +12,7 @@ import { DiningHeroSection } from '@/components/sections/DiningHeroSection';
 import { NewsletterSection } from '@/components/sections/NewsletterSection';
 import { TimelineSection } from '@/components/sections/TimelineSection';
 import { WhyChooseUsSection } from '@/components/sections/WhyChooseUsSection';
+import { AboutUsSection } from '@/components/sections/AboutUsSection';
 import { withBase } from '@/lib/basePath';
 
 export default function Home() {
@@ -74,11 +75,14 @@ export default function Home() {
         {/* Timeline Process Section: Why Choose Us */}
         <WhyChooseUsSection />
 
+        {/* About Us Section */}
+        <AboutUsSection />
+
         {/* HeaderPremium provides the integrated booking and nav experience seen in the reference images */}
-        <HeaderPremium />
+        {/* <HeaderPremium /> */}
 
         {/* destinations Section */}
-        <DestinationsSection destinations={[
+        {/* <DestinationsSection destinations={[
           {
             title: "Hotel Mulia Senayan & The Suites",
             description: "Opened in 1997 and rising 40 storeys high, Hotel Mulia Senayan stands as one of Jakarta's iconic luxury hotel. Offering two distinct experiences, Hotel Mulia is perfect for business and leisure, while The Suites, with dedicated butler service, prioritise privacy.",
@@ -93,19 +97,19 @@ export default function Home() {
             tag: "NUSA DUA, BALI",
             href: withBase("/bali")
           }
-        ]} />
+        ]} /> */}
 
         {/* Events Section */}
-        <EventsSection />
+        {/* <EventsSection /> */}
 
         {/* Planning Section 1 */}
-        <PlanningGridSection />
+        {/* <PlanningGridSection /> */} 
 
         {/* Planning Section 2 */}
-        <PlanningGridSection2 />
+        {/* <PlanningGridSection2 /> */}
 
         {/* Dining Hero Section */}
-        <DiningHeroSection />
+        {/* <DiningHeroSection /> */}
 
         {/* Newsletter Section */}
         <NewsletterSection />
