@@ -127,7 +127,7 @@ export const TimelineSection: React.FC = () => {
   });
 
   return (
-    <section ref={containerRef} className="relative w-full h-[400vh] bg-[#f5f2eb]">
+    <section id="what-we-do" ref={containerRef} className="relative w-full h-[400vh] bg-[#f5f2eb]">
       {/* Sticky Container */}
       <div className="sticky top-0 h-screen w-full flex flex-col items-center justify-center overflow-hidden">
         

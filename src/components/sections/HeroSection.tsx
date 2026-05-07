@@ -15,11 +15,11 @@ interface HeroProps {
 }
 
 const navButtons = [
-  { label: "What We Do", href: "#" },
-  { label: "Why Choose Us", href: "#" },
-  { label: "Why Bali", href: "#" },
-  { label: "About Us", href: "#" },
-  { label: "Contact Us", href: "#" },
+  { label: "What We Do", href: "#what-we-do" },
+  { label: "Why Choose Us", href: "#why-choose-us" },
+  { label: "Why Bali", href: "#bali" },
+  { label: "About Us", href: "#about-us" },
+  { label: "Contact Us", href: "#contact-us" },
 ];
 
 export const HeroSection: React.FC<HeroProps> = ({
@@ -92,7 +92,7 @@ export const HeroSection: React.FC<HeroProps> = ({
             className="mb-32 lg:mb-40"
           >
             <Link
-              href="#learn-more"
+              href="#what-we-do"
               className="px-14 py-4 bg-white text-[#4a3a2a] text-[10px] lg:text-[12px] font-manrope font-bold uppercase tracking-[0.25em] hover:bg-olive-600/95 hover:text-white transition-all duration-300 shadow-2xl"
             >
               LEARN MORE

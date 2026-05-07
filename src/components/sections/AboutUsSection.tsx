@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 
 export const AboutUsSection: React.FC = () => {
   return (
-    <section className="relative w-full py-24 md:py-32 bg-[#f5f2eb] overflow-hidden">
+    <section id="about-us" className="relative w-full py-24 md:py-32 bg-[#f5f2eb] overflow-hidden">
       <Container className="max-w-4xl mx-auto px-6">
         <div className="flex flex-col items-center">
           

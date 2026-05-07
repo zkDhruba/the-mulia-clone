@@ -82,22 +82,24 @@ export default function Home() {
         {/* <HeaderPremium /> */}
 
         {/* destinations Section */}
-        {/* <DestinationsSection destinations={[
-          {
-            title: "Hotel Mulia Senayan & The Suites",
-            description: "Opened in 1997 and rising 40 storeys high, Hotel Mulia Senayan stands as one of Jakarta's iconic luxury hotel. Offering two distinct experiences, Hotel Mulia is perfect for business and leisure, while The Suites, with dedicated butler service, prioritise privacy.",
-            image: withBase("/images/destination1.webp"),
-            tag: "SENAYAN, JAKARTA",
-            href: withBase("/jakarta")
-          },
-          {
-            title: "The Mulia, Mulia Resort & Villas",
-            description: "Discover Bali's first integrated destination, where three unique resorts await. Enjoy beachfront luxury at The Mulia, serene all-villa sanctuaries at Mulia Villas, and vibrant entertainment at Mulia Resort, all within one exclusive compound.",
-            image: withBase("/images/destination2.webp"),
-            tag: "NUSA DUA, BALI",
-            href: withBase("/bali")
-          }
-        ]} /> */}
+        {/* <div id="bali">
+          <DestinationsSection destinations={[
+            {
+              title: "Hotel Mulia Senayan & The Suites",
+              description: "Opened in 1997 and rising 40 storeys high, Hotel Mulia Senayan stands as one of Jakarta's iconic luxury hotel. Offering two distinct experiences, Hotel Mulia is perfect for business and leisure, while The Suites, with dedicated butler service, prioritise privacy.",
+              image: withBase("/images/destination1.webp"),
+              tag: "SENAYAN, JAKARTA",
+              href: withBase("/jakarta")
+            },
+            {
+              title: "The Mulia, Mulia Resort & Villas",
+              description: "Discover Bali's first integrated destination, where three unique resorts await. Enjoy beachfront luxury at The Mulia, serene all-villa sanctuaries at Mulia Villas, and vibrant entertainment at Mulia Resort, all within one exclusive compound.",
+              image: withBase("/images/destination2.webp"),
+              tag: "NUSA DUA, BALI",
+              href: withBase("/bali")
+            }
+          ]} />
+        </div> */}
 
         {/* Events Section */}
         {/* <EventsSection /> */}

@@ -24,7 +24,7 @@ export const NewsletterSection: React.FC = () => {
   };
 
   return (
-    <section className="mt-20 relative w-full py-12 lg:py-16 overflow-hidden flex items-center min-h-[400px]">
+    <section id="contact-us" className="mt-20 relative w-full py-12 lg:py-16 overflow-hidden flex items-center min-h-[400px]">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <ImageWrapper 
