@@ -1,7 +1,8 @@
 "use client";
 
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { motion, useScroll, useMotionValueEvent, AnimatePresence, useTransform } from 'framer-motion';
+import { Container } from '@/components/layout/Container';
 import { cn } from '@/lib/utils';
 
 const whySteps = [
@@ -69,6 +70,11 @@ const whySteps = [
 export const WhyChooseUsSection: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const [activeStep, setActiveStep] = useState(0);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -107,12 +113,12 @@ export const WhyChooseUsSection: React.FC = () => {
       {/* Sticky Container */}
       <div className="sticky top-0 h-screen w-full flex flex-col items-center justify-center overflow-hidden">
         
-        {/* Timeline Content Area - LOWER Z-INDEX */}
+        {/* Timeline Content Area */}
         <motion.div 
-          className="absolute inset-0 z-10 flex flex-col pointer-events-auto"
+          className="absolute inset-0 flex flex-col pointer-events-auto"
           style={{ y: timelineY }}
         >
-          <div className="flex-1 flex flex-col items-center justify-center w-full px-4 text-center max-w-2xl mx-auto pt-10">
+          <Container className="flex-1 flex flex-col items-center justify-center w-full px-4 text-center max-w-2xl mx-auto pt-10">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeStep}
@@ -144,7 +150,7 @@ export const WhyChooseUsSection: React.FC = () => {
                 )}
               </motion.div>
             </AnimatePresence>
-          </div>
+          </Container>
 
           {/* Timeline Progress Bar Area */}
           <motion.div 
@@ -195,10 +201,13 @@ export const WhyChooseUsSection: React.FC = () => {
           </motion.div>
         </motion.div>
 
-        {/* Intro Section: Why Choose Us - Moved to end and using z-[60] */}
+        {/* Intro Section: Why Choose Us */}
         <motion.div 
-          className="absolute inset-0 z-[60] flex flex-col items-center pt-[18vh] px-4 text-center pointer-events-none"
-          style={{ opacity: introOpacity, y: introY }}
+          className="absolute top-[18%] left-0 right-0 z-50 flex flex-col items-center px-4 text-center pointer-events-none"
+          style={{ 
+            opacity: mounted ? introOpacity : 1, 
+            y: mounted ? introY : "0vh" 
+          }}
         >
           <h2 className="text-5xl md:text-6xl lg:text-[4.5rem] font-ortica font-light text-[#5a4033] mb-6 tracking-tight">
             Why Choose Us
