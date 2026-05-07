@@ -95,7 +95,7 @@ export const TimelineSection: React.FC = () => {
   // Intro fades out and moves up slightly
   // Using [0, 0.10, 0.30, 1] ensures a dead zone at the start (10%), followed by a long, 
   // smooth 20% transition where the fade-out and movement are perfectly synchronized.
-  const introOpacity = useTransform(scrollYProgress, [0, 0.10, 0.30, 1], [1, 1, 0, 0]);
+  const introOpacity = useTransform(scrollYProgress, [0, 0.15, 0.2, 1], [1, 1, 0, 0]);
   const introY = useTransform(scrollYProgress, [0, 0.10, 0.30, 1], ["0vh", "0vh", "-10vh", "-10vh"]);
 
   // Timeline starts pushed down (25vh), and moves up to center (0vh) as intro fades
