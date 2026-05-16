@@ -45,38 +45,47 @@ export default function WhyBaliPage() {
               <span className="font-serif italic text-[#ba9264]">Bali</span> <br />
               is Different.
             </h1>
-            <p className="text-white/80 font-serif italic text-lg md:text-xl max-w-lg leading-relaxed">
-              Fast-emerging markets where elite growth meets raw beauty. Bali is one of the few places in the world that has consistently sustained resilience to market shocks, strength in property, and a high demand that protects its top capital.
+            <p className="text-[#8AACAC] text-lg md:text-xl max-w-lg leading-relaxed">
+              Most emerging markets offer either growth potential or stability. Bali is one of the few places in the world that has consistently delivered both, backed by real tourism data, a strengthening economy, and a legal framework that protects foreign capital.
             </p>
           </div>
+        </Container>
 
-          {/* Hero Bottom Stats */}
-          <div className="w-full border-t border-[#ba9264]/30 pt-8 pb-4">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-4">
-              <div className="flex flex-col space-y-2">
-                <span className="text-[#ba9264] text-3xl lg:text-4xl font-ortica">5.11%</span>
-                <span className="text-white/60 text-[9px] uppercase tracking-[0.2em] font-manrope">GDP GROWTH</span>
+        {/* Hero Bottom Stats - Full Width */}
+        <div className="relative z-10 w-full border-t-2 border-[#ba9264] bg-transparent">
+          <Container className="py-10">
+            <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-white/10">
+              <div className="flex flex-col items-center justify-center space-y-3 py-6 md:py-0">
+                <span className="text-white/60 text-[9px] md:text-[10px] uppercase tracking-[0.2em] font-manrope font-semibold">GDP GROWTH</span>
+                <span className="text-[#ba9264] text-4xl lg:text-5xl font-ortica">5.11%</span>
+                <span className="text-white/40 text-[9px] md:text-[10px] font-manrope">Indonesia, 2025<sup className="text-[7px]">1</sup></span>
               </div>
-              <div className="flex flex-col space-y-2">
-                <span className="text-[#ba9264] text-3xl lg:text-4xl font-ortica">6.95M</span>
-                <span className="text-white/60 text-[9px] uppercase tracking-[0.2em] font-manrope">TOURIST ARRIVALS</span>
+              <div className="flex flex-col items-center justify-center space-y-3 py-6 md:py-0">
+                <span className="text-white/60 text-[9px] md:text-[10px] uppercase tracking-[0.2em] font-manrope font-semibold">ANNUAL TOURISTS</span>
+                <span className="text-[#ba9264] text-4xl lg:text-5xl font-ortica">6.95M</span>
+                <span className="text-white/40 text-[9px] md:text-[10px] font-manrope">+9.7% year-on-year<sup className="text-[7px]">2</sup></span>
               </div>
-              <div className="flex flex-col space-y-2">
-                <span className="text-[#ba9264] text-3xl lg:text-4xl font-ortica">50K+</span>
-                <span className="text-white/60 text-[9px] uppercase tracking-[0.2em] font-manrope">EXPAT COMMUNITY</span>
+              <div className="flex flex-col items-center justify-center space-y-3 py-6 md:py-0">
+                <span className="text-white/60 text-[9px] md:text-[10px] uppercase tracking-[0.2em] font-manrope font-semibold">EXPAT RESIDENTS</span>
+                <span className="text-[#ba9264] text-4xl lg:text-5xl font-ortica">50K+</span>
+                <span className="text-white/40 text-[9px] md:text-[10px] font-manrope">International community, 2025</span>
               </div>
             </div>
             
             {/* Navigation Links */}
-            <div className="flex flex-wrap items-center gap-6 mt-12 text-[9px] md:text-[10px] text-[#ba9264] font-manrope uppercase tracking-[0.2em]">
-              <a href="#macro" className="hover:text-white transition-colors">01 MACRO ECONOMY</a>
-              <a href="#tourism" className="hover:text-white transition-colors">02 TOURISM SURGE</a>
-              <a href="#infrastructure" className="hover:text-white transition-colors">03 INFRASTRUCTURE</a>
-              <a href="#supply" className="hover:text-white transition-colors">04 SUPPLY & DEMAND</a>
-              <a href="#legal" className="hover:text-white transition-colors">05 LEGAL & REGULATORY</a>
+            <div className="flex flex-wrap items-center justify-center md:justify-center gap-6 md:gap-12 mt-12 text-[9px] md:text-[10px] text-white/60 font-manrope uppercase tracking-[0.2em]">
+              <a href="#macro" className="flex items-center gap-3 hover:text-white transition-colors group">
+                <span className="text-[#ba9264] group-hover:text-white transition-colors">01</span> 
+                <span className="font-semibold">ECONOMIC FOUNDATION</span>
+              </a>
+              <div className="w-[1px] h-4 bg-white/20 hidden md:block"></div>
+              <a href="#tourism" className="flex items-center gap-3 hover:text-white transition-colors group">
+                <span className="text-[#ba9264] group-hover:text-white transition-colors">02</span> 
+                <span className="font-semibold">TOURISM ENGINE</span>
+              </a>
             </div>
-          </div>
-        </Container>
+          </Container>
+        </div>
       </section>
 
       {/* Content wrapper for SectionIndicator */}
