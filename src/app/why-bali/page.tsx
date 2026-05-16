@@ -92,8 +92,8 @@ export default function WhyBaliPage() {
       <div className="relative z-20">
         <SectionIndicator 
           sections={[
-            { id: 'macro', name: 'Macro Economy' },
-            { id: 'tourism', name: 'Tourism Surge' }
+            { id: 'macro', name: 'Economic Foundation' },
+            { id: 'tourism', name: 'Tourism Engine' }
           ]} 
           color="text-[#ba9264]" 
         />
@@ -102,27 +102,26 @@ export default function WhyBaliPage() {
         <section id="macro" className="relative w-full bg-[#f5f2eb] py-24 md:py-32">
         <Container className="max-w-4xl mx-auto">
           <div className="mb-16">
-            <span className="text-[#ba9264] text-[10px] font-manrope uppercase tracking-[0.3em] font-bold">01 Macro Economy</span>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-ortica text-[#5a4033] mt-6 mb-8 leading-[1.1] max-w-3xl">
-              A Macro Environment Built for Property Investment... <br className="hidden md:block"/> for Property Investment
+            <span className="text-[#ba9264] text-[10px] font-manrope uppercase tracking-[0.3em] font-bold">01 Economic Foundation</span>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-ortica text-[#285858] mt-6 mb-8 leading-[1.1] max-w-3xl">
+              A Macro Environment Buil for Property Investment
             </h2>
-            <p className="text-[#5a4033]/80 font-serif italic text-lg md:text-xl max-w-3xl leading-relaxed">
-              Indonesia is one of Southeast Asia's most resilient economies. Defining Bali as a lifestyle apparel brand, moving with the shifts in global growing lifestyle demographics, a common grounds with more than a business environment, for the more traditional scale property asset class operators in the area.
+            <p className="text-[#5a4033]/80 text-lg md:text-xl max-w-3xl leading-relaxed">
+              Indonesia is one of Southeast Asia's most resilient economies. Behind Bali's lifestyle appeal sits a country with consistent GDP growth, a rising middle class, and sustained government investment in tourism infrastructure, the three conditions that make property values move upward over time.
             </p>
           </div>
 
           {/* Stats Blocks Repeated (as per design) */}
-          {[1, 2].map((blockIndex) => (
-            <div key={blockIndex} className="mb-16 last:mb-0">
-              <div className="w-full bg-[#1e3b3b] p-8 md:p-12 mb-8">
+            <div className="mb-16 last:mb-0">
+              <div className="w-full bg-[#285858] p-8 md:p-12 mb-8">
                 <div className="flex flex-col md:flex-row md:items-center justify-between gap-8">
                   <h3 className="text-[#ba9264] text-5xl md:text-6xl font-ortica whitespace-nowrap">
                     505.46 <span className="text-2xl md:text-3xl">T IDR</span>
                   </h3>
                   <div className="flex flex-col space-y-2">
-                    <span className="text-white font-manrope text-sm font-semibold tracking-wide">Indonesia's GDP in 2023</span>
-                    <p className="text-white/60 font-serif italic text-sm md:text-base max-w-md">
-                      A testament to our resilient post-pandemic recovery and strong, sustained growth among Southeast Asian economies. Bali has been an economic driver, steadily supported by the nation's rising focus on holistic growth and high numbers of global digital nomads, which significantly strengthens long-term property investments.
+                    <span className="text-[#F5EED8] font-manrope text-lg font-semibold tracking-wide">Indonesia's GDP in 2023</span>
+                    <p className="text-[#7A9898] text-sm md:text-base max-w-md">
+                      Indonesia's GDP reached 505.46 trillion IDR in 2023 and continues to grow, cementing its place among Southeast Asia's strongest economies. This level of macroeconomic stability is the foundation on which Bali's property market stands, it means the country is not dependent on a single export sector, and that investor confidence is supported by genuine economic depth, not a speculative boom.
                     </p>
                   </div>
                 </div>
@@ -131,21 +130,34 @@ export default function WhyBaliPage() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-12 pt-8 border-t border-[#ba9264]/20">
                 <div className="flex flex-col">
                   <span className="text-[#ba9264] text-4xl font-ortica mb-2">5.11%</span>
-                  <span className="text-[#5a4033] text-[9px] uppercase tracking-[0.2em] font-manrope font-bold mb-4">INDONESIA GDP GROWTH RATE</span>
-                  <p className="text-[#5a4033]/70 font-serif text-sm leading-relaxed">
-                    Surpasses the global average of 3.1%. Bali stands out as a high-growth zone due to robust tourism and steady domestic investments into infrastructure, paving strong ways to real estate resilience and offering a highly favorable environment for investors seeking sustainable returns.
+                  <span className="text-[#5a4033] text-[9px] uppercase tracking-[0.2em] font-manrope font-bold mb-4">GDP Growth. Indonesia 2025</span>
+                  <p className="text-[#5a4033]/70 text-sm leading-relaxed">
+                    Indonesia's economy grew at 5.11% in 2025, one of the strongest rates in Southeast Asia. Growth of this kind creates rising household incomes, increased consumer spending, and a growing professional class, all of which underpin property demand. For investors, this macroeconomic backdrop means the market you're entering is expanding, not contracting.
                   </p>
                 </div>
                 <div className="flex flex-col">
                   <span className="text-[#ba9264] text-4xl font-ortica mb-2">50K+</span>
-                  <span className="text-[#5a4033] text-[9px] uppercase tracking-[0.2em] font-manrope font-bold mb-4">ACTIVE GLOBAL DIGITAL NOMADS</span>
-                  <p className="text-[#5a4033]/70 font-serif text-sm leading-relaxed">
-                    With Bali taking on a flexible remote work friendly visa options, a steady and growing expat base means consistent demand for premium residential and commercial spaces. A growing demographic that is moving beyond short term rentals, seeking mid-to-long term luxury homes and co-working infrastructures that support modern lifestyles.
+                  <span className="text-[#5a4033] text-[9px] uppercase tracking-[0.2em] font-manrope font-bold mb-4">International Residents. Bali 2025</span>
+                  <p className="text-[#5a4033]/70 text-sm leading-relaxed">
+                    Over 50,000 international residents now call Bali home, digital nomads, entrepreneurs, retirees, and remote workers predominantly from Europe and Australia. This long-stay community creates sustained, non-seasonal demand for premium residential property. It also generates a high-income buyer pool that doesn't exist in most emerging markets at this scale, directly supporting exit values on every project we build.
+                  </p>
+                </div>
+                <div className="flex flex-col">
+                  <span className="text-[#ba9264] text-4xl font-ortica mb-2">↑</span>
+                  <span className="text-[#5a4033] text-[9px] uppercase tracking-[0.2em] font-manrope font-bold mb-4">Government Infrastructure Investment</span>
+                  <p className="text-[#5a4033]/70 text-sm leading-relaxed">
+                    The Indonesian government has committed major capital to Bali's infrastructure, including road networks, the Bali airport expansion, and new connectivity into key development corridors. Government infrastructure spend is one of the most reliable leading indicators of property price growth, because it reduces build costs, increases accessibility, and expands the addressable market for buyers and tenants alike.
+                  </p>
+                </div>
+                <div className="flex flex-col">
+                  <span className="text-[#ba9264] text-4xl font-ortica mb-2">UK–ID</span>
+                  <span className="text-[#5a4033] text-[9px] uppercase tracking-[0.2em] font-manrope font-bold mb-4">Double Taxation Agreement</span>
+                  <p className="text-[#5a4033]/70 text-sm leading-relaxed">
+                    For UK investors specifically, the UK–Indonesia Double Taxation Agreement (DTA) is a material advantage. It means returns earned through a compliant investment structure are not taxed twice, once in Indonesia and once in the UK. Combined with Indonesia's PT PMA legal structure for foreign investment, the regulatory framework for UK capital investing in Bali is clearer and better protected than many investors assume.
                   </p>
                 </div>
               </div>
             </div>
-          ))}
         </Container>
       </section>
 
