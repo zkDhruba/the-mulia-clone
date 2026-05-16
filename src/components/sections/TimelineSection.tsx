@@ -4,6 +4,7 @@ import React, { useRef, useState, useEffect } from 'react';
 import { motion, useScroll, useMotionValueEvent, AnimatePresence, useTransform } from 'framer-motion';
 import { Container } from '@/components/layout/Container';
 import { cn } from '@/lib/utils';
+import Link from 'next/link';
 
 // Using inline SVGs to match the aesthetic and avoid missing dependencies
 const steps = [
@@ -238,6 +239,21 @@ export const TimelineSection: React.FC = () => {
             keep you completely passive<br className="hidden md:block"/>
             and deliver on every metric
           </p>
+
+          <div className="flex flex-col sm:flex-row items-center gap-4 mt-8 pointer-events-auto">
+            <Link 
+              href="#what-we-do"
+              className="px-10 py-3 border border-[#5a4033] text-[#5a4033] text-[12px] font-manrope font-bold uppercase tracking-[0.2em] hover:bg-[#5a4033] hover:text-white transition-all duration-300"
+            >
+              Our Model
+            </Link>
+            <Link 
+              href="#why-choose-us"
+              className="px-10 py-3 bg-[#5a4033] text-white text-[12px] font-manrope font-bold uppercase tracking-[0.2em] hover:bg-[#4a3529] transition-all duration-300"
+            >
+              Why Choose Us
+            </Link>
+          </div>
         </motion.div>
 
       </div>
