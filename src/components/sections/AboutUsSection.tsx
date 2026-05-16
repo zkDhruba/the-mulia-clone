@@ -88,9 +88,9 @@ export const AboutUsSection: React.FC = () => {
       </Container>
 
       {/* Decorative "R" in corner (optional but matches image) */}
-      <div className="absolute top-12 left-12 opacity-10 hidden md:block">
+      {/* <div className="absolute top-12 left-12 opacity-10 hidden md:block">
          <span className="text-6xl font-ortica text-[#5a4033]">R</span>
-      </div>
+      </div> */}
     </section>
   );
 };
