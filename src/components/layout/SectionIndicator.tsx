@@ -3,14 +3,15 @@
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-const sections = [
-  { id: 'what-we-do', name: 'What We Do' },
-  { id: 'why-choose-us', name: 'Why Choose Us' },
-  { id: 'bali', name: 'Why Bali' },
-  { id: 'contact-us', name: 'Contact Us' },
-];
+interface SectionIndicatorProps {
+  sections: { id: string; name: string }[];
+  color?: string;
+}
 
-export const SectionIndicator: React.FC = () => {
+export const SectionIndicator: React.FC<SectionIndicatorProps> = ({ 
+  sections, 
+  color = "text-[#5a4033]" 
+}) => {
   const [activeSection, setActiveSection] = useState<string | null>(null);
 
   useEffect(() => {
@@ -44,7 +45,7 @@ export const SectionIndicator: React.FC = () => {
         {/* Home Icon */}
         <button 
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          className="pointer-events-auto text-[#5a4033] opacity-40 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
+          className={`pointer-events-auto opacity-40 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center ${color}`}
           aria-label="Back to top"
         >
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
@@ -63,7 +64,7 @@ export const SectionIndicator: React.FC = () => {
                 animate={{ opacity: 0.4, y: 0 }}
                 exit={{ opacity: 0, y: 10 }}
                 transition={{ duration: 0.5, ease: "easeOut" }}
-                className="text-[#5a4033] text-[10px] md:text-xs font-manrope font-bold uppercase tracking-[0.3em] bg-transparent whitespace-nowrap"
+                className={`${color} text-[10px] md:text-xs font-manrope font-bold uppercase tracking-[0.3em] bg-transparent whitespace-nowrap`}
               >
                 {activeSection}
               </motion.div>

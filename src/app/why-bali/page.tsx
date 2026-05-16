@@ -3,19 +3,23 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { withBase } from '@/lib/basePath';
 import { Container } from '@/components/layout/Container';
+import { SectionIndicator } from '@/components/layout/SectionIndicator';
 
 export default function WhyBaliPage() {
   return (
     <div className="relative w-full min-h-screen bg-[#132B2B] flex flex-col font-sans overflow-hidden">
       
       {/* Header */}
-      <header className="absolute top-0 w-full flex justify-between p-6 md:p-10 z-50">
-        <Link href={withBase("/")} className="text-white/80 hover:text-white transition-colors text-[10px] md:text-xs tracking-[0.2em] uppercase font-manrope">
-          Rawasi Developments
+      <header className="absolute top-0 w-full flex justify-center p-6 md:p-10 z-50 bg-yellow-100/10">
+        <Link href={withBase("/")} className="relative block transition-transform hover:scale-105">
+          <Image 
+            src={withBase("/logos/rawasi_logo.png")} 
+            alt="Rawasi Logo" 
+            width={110} 
+            height={110}
+            className="object-contain"
+          />
         </Link>
-        <div className="text-[#ba9264] text-[10px] md:text-xs tracking-[0.2em] uppercase font-manrope font-semibold">
-          Why Bali
-        </div>
       </header>
 
       {/* Hero Section */}
@@ -75,8 +79,18 @@ export default function WhyBaliPage() {
         </Container>
       </section>
 
-      {/* 01 Macro Economy Section */}
-      <section id="macro" className="relative w-full bg-[#f5f2eb] py-24 md:py-32">
+      {/* Content wrapper for SectionIndicator */}
+      <div className="relative z-20">
+        <SectionIndicator 
+          sections={[
+            { id: 'macro', name: 'Macro Economy' },
+            { id: 'tourism', name: 'Tourism Surge' }
+          ]} 
+          color="text-[#ba9264]" 
+        />
+
+        {/* 01 Macro Economy Section */}
+        <section id="macro" className="relative w-full bg-[#f5f2eb] py-24 md:py-32">
         <Container className="max-w-4xl mx-auto">
           <div className="mb-16">
             <span className="text-[#ba9264] text-[10px] font-manrope uppercase tracking-[0.3em] font-bold">01 Macro Economy</span>
@@ -214,7 +228,7 @@ export default function WhyBaliPage() {
           </div>
         </Container>
       </section>
-
+      </div>
     </div>
   );
 }

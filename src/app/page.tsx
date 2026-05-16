@@ -69,7 +69,12 @@ export default function Home() {
         This section eventually covers both the image and the hero text area.
       */}
       <section className="relative z-20 bg-[#fbfbfb]">
-        <SectionIndicator />
+        <SectionIndicator sections={[
+          { id: 'what-we-do', name: 'What We Do' },
+          { id: 'why-choose-us', name: 'Why Choose Us' },
+          { id: 'bali', name: 'Why Bali' },
+          { id: 'contact-us', name: 'Contact Us' },
+        ]} />
         
         {/* Timeline Process Section: What We Do */}
         <TimelineSection />
