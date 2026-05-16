@@ -108,8 +108,27 @@ export const WhyChooseUsSection: React.FC = () => {
     }
   });
 
+  const handleDotClick = (index: number) => {
+    if (!containerRef.current) return;
+    
+    // The total scrollable distance within this section
+    const scrollableDistance = containerRef.current.offsetHeight - window.innerHeight;
+    
+    // Target progress calculation: Intro ends at 0.30. We add a tiny buffer (0.01) to ensure the step activates.
+    const targetProgress = 0.30 + (index / whySteps.length) * 0.70 + 0.01;
+    
+    // Absolute top position of the container relative to the document
+    const { top } = containerRef.current.getBoundingClientRect();
+    const absoluteTop = window.scrollY + top;
+    
+    // Calculate final scroll position
+    const targetScrollY = absoluteTop + (targetProgress * scrollableDistance);
+    
+    window.scrollTo({ top: targetScrollY, behavior: 'smooth' });
+  };
+
   return (
-    <section id="why-choose-us" ref={containerRef} className="relative w-full h-[400vh] bg-[#f5f2eb]">
+    <section id="why-choose-us" ref={containerRef} className="relative w-full h-[250vh] bg-[#f5f2eb]">
       {/* Sticky Container */}
       <div className="sticky top-0 h-screen w-full flex flex-col items-center justify-center overflow-hidden">
         
@@ -174,20 +193,22 @@ export const WhyChooseUsSection: React.FC = () => {
               <div className="relative z-10 flex justify-between items-center w-full">
                 {whySteps.map((_, i) => (
                   <div key={i} className="flex flex-col items-center">
-                    <div 
+                    <button 
+                      onClick={() => handleDotClick(i)}
                       className={cn(
-                        "w-[14px] h-[14px] rounded-full border-[1.5px] transition-colors duration-500 bg-[#f5f2eb]",
+                        "w-[14px] h-[14px] rounded-full border-[1.5px] transition-all duration-500 bg-[#f5f2eb] hover:scale-125 focus:outline-none cursor-pointer",
                         i <= activeStep 
                           ? "border-[#5a4033]" 
                           : "border-[#dcd8d0]"
                       )}
+                      aria-label={`Go to step ${i + 1}`}
                     >
                       {/* Inner dot fill for active steps */}
                       <div className={cn(
                         "w-full h-full rounded-full transition-opacity duration-500",
                         i <= activeStep ? "bg-[#5a4033] opacity-100" : "opacity-0"
                       )} />
-                    </div>
+                    </button>
                   </div>
                 ))}
               </div>
