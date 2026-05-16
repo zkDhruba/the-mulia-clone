@@ -6,6 +6,7 @@ import { Container } from '@/components/layout/Container';
 import { ImageWrapper } from '@/components/shared/ImageWrapper';
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
+import { withBase } from '@/lib/basePath';
 
 interface HeroProps {
   image?: string;
@@ -18,7 +19,7 @@ const navButtons = [
   { label: "What We Do", href: "#what-we-do" },
   { label: "Why Choose Us", href: "#why-choose-us" },
   { label: "Why Bali", href: "#bali" },
-  { label: "About Us", href: "#about-us" },
+  { label: "About Us", href: withBase("/about") },
   { label: "Contact Us", href: "#contact-us" },
 ];
 

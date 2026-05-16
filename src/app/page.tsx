@@ -12,7 +12,6 @@ import { DiningHeroSection } from '@/components/sections/DiningHeroSection';
 import { NewsletterSection } from '@/components/sections/NewsletterSection';
 import { TimelineSection } from '@/components/sections/TimelineSection';
 import { WhyChooseUsSection } from '@/components/sections/WhyChooseUsSection';
-import { AboutUsSection } from '@/components/sections/AboutUsSection';
 import { withBase } from '@/lib/basePath';
 
 export default function Home() {
@@ -75,8 +74,6 @@ export default function Home() {
         {/* Timeline Process Section: Why Choose Us */}
         <WhyChooseUsSection />
 
-        {/* About Us Section */}
-        <AboutUsSection />
 
         {/* HeaderPremium provides the integrated booking and nav experience seen in the reference images */}
         {/* <HeaderPremium /> */}
