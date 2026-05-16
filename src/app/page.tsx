@@ -12,6 +12,7 @@ import { DiningHeroSection } from '@/components/sections/DiningHeroSection';
 import { NewsletterSection } from '@/components/sections/NewsletterSection';
 import { TimelineSection } from '@/components/sections/TimelineSection';
 import { WhyChooseUsSection } from '@/components/sections/WhyChooseUsSection';
+import { SectionIndicator } from '@/components/layout/SectionIndicator';
 import { withBase } from '@/lib/basePath';
 
 export default function Home() {
@@ -68,6 +69,8 @@ export default function Home() {
         This section eventually covers both the image and the hero text area.
       */}
       <section className="relative z-20 bg-[#fbfbfb]">
+        <SectionIndicator />
+        
         {/* Timeline Process Section: What We Do */}
         <TimelineSection />
 
