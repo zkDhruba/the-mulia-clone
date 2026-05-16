@@ -92,7 +92,12 @@ export const WhyChooseUsSection: React.FC = () => {
   const progressBarOpacity = useTransform(scrollYProgress, [0, 0.10, 0.30, 1], [0, 0, 1, 1]);
 
   // Progress line scales after the initial positioning phase
-  const progressLineScaleX = useTransform(scrollYProgress, [0.30, 1], [0, 1]);
+  // We map the scroll segments exactly to the physical dot positions (0%, 25%, 50%, 75%, 100%)
+  const progressLineScaleX = useTransform(
+    scrollYProgress, 
+    [0.30, 0.44, 0.58, 0.72, 0.86, 1], 
+    [0, 0.25, 0.50, 0.75, 1, 1]
+  );
 
   useMotionValueEvent(scrollYProgress, "change", (latest) => {
     // Only start changing steps AFTER the synchronized intro phase (latest > 0.30)
@@ -114,8 +119,8 @@ export const WhyChooseUsSection: React.FC = () => {
     // The total scrollable distance within this section
     const scrollableDistance = containerRef.current.offsetHeight - window.innerHeight;
     
-    // Target progress calculation: Intro ends at 0.30. We add a tiny buffer (0.01) to ensure the step activates.
-    const targetProgress = 0.30 + (index / whySteps.length) * 0.70 + 0.01;
+    // Target progress calculation: Intro ends at 0.30. We add a tiny buffer (0.005) to ensure the step activates while keeping the bar right on the dot.
+    const targetProgress = 0.30 + (index / whySteps.length) * 0.70 + 0.005;
     
     // Absolute top position of the container relative to the document
     const { top } = containerRef.current.getBoundingClientRect();
