@@ -39,8 +39,8 @@ export const SectionIndicator: React.FC = () => {
   }, []);
 
   return (
-    <div className="sticky top-10 w-full flex justify-center z-[100] pointer-events-none h-0">
-      <div className="flex items-center gap-12">
+    <div className="sticky top-2 w-full flex justify-center z-[100] pointer-events-none h-0">
+      <div className="flex items-center gap-12 pt-8">
         {/* Home Icon */}
         <button 
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
