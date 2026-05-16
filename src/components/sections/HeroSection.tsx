@@ -18,7 +18,7 @@ interface HeroProps {
 const navButtons = [
   { label: "What We Do", href: "#what-we-do" },
   { label: "Why Choose Us", href: "#why-choose-us" },
-  { label: "Why Bali", href: "#bali" },
+  { label: "Why Bali", href: withBase("/why-bali") },
   { label: "About Us", href: withBase("/about") },
   { label: "Contact Us", href: "#contact-us" },
 ];
