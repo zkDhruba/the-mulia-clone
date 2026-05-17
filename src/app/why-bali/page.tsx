@@ -127,31 +127,31 @@ export default function WhyBaliPage() {
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-12 pt-8 border-t border-[#ba9264]/20">
-                <div className="flex flex-col">
-                  <span className="text-[#ba9264] text-4xl font-ortica mb-2">5.11%</span>
-                  <span className="text-[#5a4033] text-[9px] uppercase tracking-[0.2em] font-manrope font-bold mb-4">GDP Growth. Indonesia 2025</span>
+              <div className="grid grid-cols-1 md:grid-cols-2 mt-8 border-l border-t border-[#ba9264]/30">
+                <div className="flex flex-col p-8 md:p-12 border-r border-b border-[#ba9264]/30 hover:bg-[#ba9264]/10 transition-colors duration-300">
+                  <span className="text-[#ba9264] text-5xl font-ortica mb-4">5.11%</span>
+                  <span className="text-[#5a4033] text-[10px] uppercase tracking-[0.2em] font-manrope font-bold mb-6">GDP Growth. Indonesia 2025</span>
                   <p className="text-[#5a4033]/70 text-sm leading-relaxed">
                     Indonesia's economy grew at 5.11% in 2025, one of the strongest rates in Southeast Asia. Growth of this kind creates rising household incomes, increased consumer spending, and a growing professional class, all of which underpin property demand. For investors, this macroeconomic backdrop means the market you're entering is expanding, not contracting.
                   </p>
                 </div>
-                <div className="flex flex-col">
-                  <span className="text-[#ba9264] text-4xl font-ortica mb-2">50K+</span>
-                  <span className="text-[#5a4033] text-[9px] uppercase tracking-[0.2em] font-manrope font-bold mb-4">International Residents. Bali 2025</span>
+                <div className="flex flex-col p-8 md:p-12 border-r border-b border-[#ba9264]/30 hover:bg-[#ba9264]/10 transition-colors duration-300">
+                  <span className="text-[#ba9264] text-5xl font-ortica mb-4">50K+</span>
+                  <span className="text-[#5a4033] text-[10px] uppercase tracking-[0.2em] font-manrope font-bold mb-6">International Residents. Bali 2025</span>
                   <p className="text-[#5a4033]/70 text-sm leading-relaxed">
                     Over 50,000 international residents now call Bali home, digital nomads, entrepreneurs, retirees, and remote workers predominantly from Europe and Australia. This long-stay community creates sustained, non-seasonal demand for premium residential property. It also generates a high-income buyer pool that doesn't exist in most emerging markets at this scale, directly supporting exit values on every project we build.
                   </p>
                 </div>
-                <div className="flex flex-col">
-                  <span className="text-[#ba9264] text-4xl font-ortica mb-2">↑</span>
-                  <span className="text-[#5a4033] text-[9px] uppercase tracking-[0.2em] font-manrope font-bold mb-4">Government Infrastructure Investment</span>
+                <div className="flex flex-col p-8 md:p-12 border-r border-b border-[#ba9264]/30 hover:bg-[#ba9264]/10 transition-colors duration-300">
+                  <span className="text-[#ba9264] text-5xl font-ortica mb-4">↑</span>
+                  <span className="text-[#5a4033] text-[10px] uppercase tracking-[0.2em] font-manrope font-bold mb-6">Government Infrastructure Investment</span>
                   <p className="text-[#5a4033]/70 text-sm leading-relaxed">
                     The Indonesian government has committed major capital to Bali's infrastructure, including road networks, the Bali airport expansion, and new connectivity into key development corridors. Government infrastructure spend is one of the most reliable leading indicators of property price growth, because it reduces build costs, increases accessibility, and expands the addressable market for buyers and tenants alike.
                   </p>
                 </div>
-                <div className="flex flex-col">
-                  <span className="text-[#ba9264] text-4xl font-ortica mb-2">UK–ID</span>
-                  <span className="text-[#5a4033] text-[9px] uppercase tracking-[0.2em] font-manrope font-bold mb-4">Double Taxation Agreement</span>
+                <div className="flex flex-col p-8 md:p-12 border-r border-b border-[#ba9264]/30 hover:bg-[#ba9264]/10 transition-colors duration-300">
+                  <span className="text-[#ba9264] text-5xl font-ortica mb-4">UK–ID</span>
+                  <span className="text-[#5a4033] text-[10px] uppercase tracking-[0.2em] font-manrope font-bold mb-6">Double Taxation Agreement</span>
                   <p className="text-[#5a4033]/70 text-sm leading-relaxed">
                     For UK investors specifically, the UK–Indonesia Double Taxation Agreement (DTA) is a material advantage. It means returns earned through a compliant investment structure are not taxed twice, once in Indonesia and once in the UK. Combined with Indonesia's PT PMA legal structure for foreign investment, the regulatory framework for UK capital investing in Bali is clearer and better protected than many investors assume.
                   </p>
