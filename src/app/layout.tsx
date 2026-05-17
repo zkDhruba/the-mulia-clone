@@ -51,8 +51,8 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.variable} ${playfair.variable} ${manrope.variable} ${orticaLinear.variable} antialiased font-sans`}>
         <SmoothScroll>
-          <main className="relative z-10 bg-background mb-[var(--footer-height,500px)]">{children}</main>
-          {/* <Footer /> */}
+          <main className="relative z-10 bg-background">{children}</main>
+          <Footer />
         </SmoothScroll>
       </body>
     </html>
