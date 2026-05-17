@@ -242,10 +242,13 @@ export default function WhyBaliPage() {
             </div>
           </div>
 
-          <div className="w-full border-t border-b border-[#ba9264]/50 py-8 text-center">
-            <h3 className="text-[#ba9264] text-xl md:text-2xl font-serif italic mb-2">
-              With Bali sweeping all these travel awards, it's easy to see why it attracts so much attention.
+          <div className="w-full bg-[#1e3b3b] border-l-4 border-[#ba9264] p-8 md:p-10 lg:p-12 text-left">
+            <h3 className="text-[#F5EED8] text-lg md:text-xl lg:text-2xl font-serif italic mb-6">
+              "Bali isn't competing with other emerging markets. It's competing with the Maldives and Hawaii... and winning."
             </h3>
+            <span className="text-[#ba9264] text-[9px] md:text-[10px] uppercase tracking-[0.2em] font-manrope font-bold">
+              RAWASI DEVELOPMENTS. INVESTOR PERSPECTIVE
+            </span>
           </div>
         </Container>
       </section>
