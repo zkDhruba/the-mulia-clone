@@ -3,6 +3,7 @@ import { Inter, Playfair_Display, Manrope } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 import { Footer } from "@/components/layout/Footer";
+import { MobileNavbar } from "@/components/layout/MobileNavbar";
 
 import { SmoothScroll } from "@/components/layout/SmoothScroll";
 
@@ -50,6 +51,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.variable} ${playfair.variable} ${manrope.variable} ${orticaLinear.variable} antialiased font-sans`}>
+        <MobileNavbar />
         <SmoothScroll>
           <main className="relative z-10 bg-background">{children}</main>
           <Footer />
