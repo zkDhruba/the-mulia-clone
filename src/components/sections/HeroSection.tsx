@@ -57,13 +57,13 @@ export const HeroSection: React.FC<HeroProps> = ({
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="mt-24 lg:mt-32 flex flex-wrap justify-center gap-4 lg:gap-6 w-full"
+            className="mt-24 lg:mt-32 flex flex-wrap justify-center gap-3 md:gap-4 lg:gap-6 w-full px-2 md:px-0"
           >
             {navButtons.map((btn, index) => (
               <Link
                 key={index}
                 href={btn.href}
-                className="px-8 py-2.5 border border-white rounded-xl text-[14px] lg:text-[16px] font-manrope font-bold uppercase tracking-[0.15em] hover:bg-white hover:text-black transition-all duration-300 backdrop-blur-[2px]"
+                className="px-3 py-1.5 md:px-6 md:py-2 lg:px-8 lg:py-2.5 border border-white rounded-lg md:rounded-xl text-[10px] md:text-[14px] lg:text-[16px] font-manrope font-bold uppercase tracking-[0.15em] hover:bg-white hover:text-black transition-all duration-300 backdrop-blur-[2px]"
               >
                 {btn.label}
               </Link>
@@ -80,7 +80,7 @@ export const HeroSection: React.FC<HeroProps> = ({
             <h1 className="text-[5rem] md:text-[8rem] lg:text-[12rem] font-ortica font-light tracking-[-0.02em] leading-none mb-1">
               RAWASI
             </h1>
-            <p className="text-base md:text-lg lg:text-2xl font-manrope font-light uppercase tracking-[0.5em] text-white/95">
+            <p className="text-base text-center md:text-lg lg:text-2xl font-manrope font-light uppercase tracking-[0.5em] text-white/95">
               PROPERTY DEVELOPMENT
             </p>
           </motion.div>
