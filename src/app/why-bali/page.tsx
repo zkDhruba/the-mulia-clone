@@ -102,7 +102,7 @@ export default function WhyBaliPage() {
         <section id="macro" className="relative w-full bg-[#f5f2eb] py-24 md:py-32">
         <Container className="max-w-4xl mx-auto">
           <div className="mb-16">
-            <span className="text-[#ba9264] text-[10px] font-manrope uppercase tracking-[0.3em] font-bold">01 Economic Foundation</span>
+            <span className="text-[#ba9264] text-sm font-manrope uppercase tracking-[0.3em] font-bold">01 Economic Foundation</span>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-ortica text-[#285858] mt-6 mb-8 leading-[1.1] max-w-3xl">
               A Macro Environment Buil for Property Investment
             </h2>
@@ -162,15 +162,15 @@ export default function WhyBaliPage() {
       </section>
 
       {/* 02 Tourism Surge Section */}
-      <section id="tourism" className="relative w-full bg-[#132B2B] py-24 md:py-32">
+      <section id="tourism" className="relative w-full bg-[#285858] py-24 md:py-32">
         <Container className="max-w-5xl mx-auto">
           <div className="mb-16">
-            <span className="text-[#ba9264] text-[10px] font-manrope uppercase tracking-[0.3em] font-bold">02 Tourism Surge</span>
+            <span className="text-[#ba9264] text-sm font-manrope uppercase tracking-[0.3em] font-bold">02 Tourism Engine</span>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-ortica text-white mt-6 mb-8 leading-[1.1]">
               The World Keeps Choosing Bali.
             </h2>
-            <p className="text-white/70 font-serif italic text-lg md:text-xl max-w-3xl leading-relaxed">
-              Bali isn't just a travel destination. For many, it's a second home. The island's appeal continues to thrive across decades, earning it consistent top rankings globally. The continuous influx of tourists fuels strong demand for high-end accommodation and premium lifestyle properties, making it an ever-reliable market.
+            <p className="text-[#8AACAC] text-lg md:text-xl max-w-3xl leading-relaxed">
+              Bali isn't a trend. It's a global institution. The island has been one of the world's most visited destinations for over two decades, and that consistency is what separates it from markets dependent on a single event, a speculative cycle, or a government-led push. Bali has earned its position, and the numbers reflect it.
             </p>
           </div>
 
@@ -180,20 +180,20 @@ export default function WhyBaliPage() {
               <div className="w-6 h-6 bg-[#ba9264]/20 flex items-center justify-center rotate-45 mb-6">
                 <div className="w-2 h-2 bg-[#ba9264]" />
               </div>
-              <h4 className="text-white font-manrope text-sm font-semibold mb-4">Anything but Mainstream</h4>
-              <p className="text-white/60 font-serif text-xs leading-relaxed">
-                Bali continues to defend its titles and rank positions. In 2024, it placed #2 in TripAdvisor's "Best of the Best" destinations globally. Its unique blend of untouched nature, profound culture, and world-class luxury experiences creates an environment that goes beyond mere holidaying. It offers an unparalleled lifestyle, constantly driving international buyers towards premium property markets.
+              <h4 className="text-[#F5EED8] font-manrope text-base font-semibold mb-4">6.95 Million Visitors in 2025</h4>
+              <p className="text-[#6A8888] text-sm leading-relaxed">
+                Bali welcomed 6.95 million international tourists in 2025, a 9.7% increase year-on-year. This wasn't a post-pandemic anomaly; it's part of a sustained upward trend. More visitors means more demand for accommodation, more pressure on short-stay inventory, and more incentive for developers to build and buyers to buy. Every villa sold in a Rawasi project is sold into this market.
               </p>
             </div>
 
             {/* Card 2 */}
             <div className="border border-[#ba9264]/30 bg-[#163535] p-8 flex flex-col hover:bg-[#1a3d3d] transition-colors">
-              <div className="w-6 h-6 bg-[#86af49]/20 flex items-center justify-center rotate-45 mb-6">
+              <div className="w-6 h-6 bg-[#b8f249]/20 flex items-center justify-center rotate-45 mb-6">
                 <div className="w-2 h-2 bg-[#86af49]" />
               </div>
-              <h4 className="text-white font-manrope text-sm font-semibold mb-4">Consistently Top-Level Resources</h4>
-              <p className="text-white/60 font-serif text-xs leading-relaxed">
-                Bali was awarded "Best Island in Asia" by Travel + Leisure readers in 2023. Unlike cyclical markets, Bali's enduring appeal guarantees strong, year-round occupancy for luxury villas and upscale resorts. The consistent flow of affluent visitors seeking high-end accommodations ensures robust yields for property investors and developers.
+              <h4 className="text-[#F5EED8] font-manrope text-base font-semibold mb-4">Consistently Top 3 Global Destination</h4>
+              <p className="text-[#6A8888] text-sm leading-relaxed">
+                Bali consistently ranks in the world's top three most visited islands, alongside Hawaii and the Maldives. This level of global recognition matters for property investment because it means demand isn't localised or seasonal, it's diverse, year-round, and draws high-net-worth travellers from Europe, Australia, East Asia, and the Americas. That breadth of demand is a genuine buffer against market shocks.
               </p>
             </div>
 
@@ -202,9 +202,9 @@ export default function WhyBaliPage() {
               <div className="w-6 h-6 bg-[#4e8c9b]/20 flex items-center justify-center rotate-45 mb-6">
                 <div className="w-2 h-2 bg-[#4e8c9b]" />
               </div>
-              <h4 className="text-white font-manrope text-sm font-semibold mb-4">In-line with Global Demands</h4>
-              <p className="text-white/60 font-serif text-xs leading-relaxed">
-                Beyond tourism, Bali has become a primary destination for global MICE events. It successfully hosted the G20 Summit in 2022 and continues to host major international conferences. This transformation solidifies Bali as a professional hub, attracting business travelers and long-term stays, thereby diversifying the demographic of property renters and creating a dynamic housing demand.
+              <h4 className="text-[#F5EED8] font-manrope text-base font-semibold mb-4">50,000+ Expat Residents</h4>
+              <p className="text-[#6A8888] text-sm leading-relaxed">
+                Beyond tourists, Bali has become a permanent base for over 50,000 international residents, digital nomads, entrepreneurs, retirees, and remote workers predominantly from Europe and Australia. This long-stay community creates a different kind of demand: not short-term rental occupancy, but medium and long-term tenancy, and eventually outright purchase. It's a buyer base that doesn't exist in most emerging markets at this scale.
               </p>
             </div>
 
@@ -213,9 +213,9 @@ export default function WhyBaliPage() {
               <div className="w-6 h-6 bg-[#ba9264]/20 flex items-center justify-center rotate-45 mb-6">
                 <div className="w-2 h-2 bg-[#ba9264]" />
               </div>
-              <h4 className="text-white font-manrope text-sm font-semibold mb-4">Anything but Mainstream</h4>
-              <p className="text-white/60 font-serif text-xs leading-relaxed">
-                Bali continues to defend its titles and rank positions. In 2024, it placed #2 in TripAdvisor's "Best of the Best" destinations globally. Its unique blend of untouched nature, profound culture, and world-class luxury experiences creates an environment that goes beyond mere holidaying. It offers an unparalleled lifestyle, constantly driving international buyers towards premium property markets.
+              <h4 className="text-[#F5EED8] font-manrope text-base font-semibold mb-4">Year-Round Demand, No Off-Season</h4>
+              <p className="text-[#6A8888] text-sm leading-relaxed">
+                Bali's appeal is not seasonal. While it has a wet season, visitor numbers remain strong year-round because the island attracts different traveller profiles throughout the year, surf culture from March to October, cultural tourism year-round, yoga and wellness retreats in the quieter months, and long-stay remote workers who move regardless of season. This smooths out the cash flow profile of any development.
               </p>
             </div>
 
@@ -224,9 +224,9 @@ export default function WhyBaliPage() {
               <div className="w-6 h-6 bg-[#86af49]/20 flex items-center justify-center rotate-45 mb-6">
                 <div className="w-2 h-2 bg-[#86af49]" />
               </div>
-              <h4 className="text-white font-manrope text-sm font-semibold mb-4">Consistently Top-Level Resources</h4>
-              <p className="text-white/60 font-serif text-xs leading-relaxed">
-                Bali was awarded "Best Island in Asia" by Travel + Leisure readers in 2023. Unlike cyclical markets, Bali's enduring appeal guarantees strong, year-round occupancy for luxury villas and upscale resorts. The consistent flow of affluent visitors seeking high-end accommodations ensures robust yields for property investors and developers.
+              <h4 className="text-[#F5EED8] font-manrope text-base font-semibold mb-4">Supply Still Can't Keep Up</h4>
+              <p className="text-[#6A8888] text-sm leading-relaxed">
+                Despite record demand, quality supply remains constrained. Building regulations, land fragmentation, and the complexity of the permitting process mean that premium, well-designed developments are genuinely scarce. This supply-demand imbalance is a developer's ideal operating environment, particularly for build-to-sell projects where the exit is timed to capture peak market conditions.
               </p>
             </div>
 
@@ -235,9 +235,9 @@ export default function WhyBaliPage() {
               <div className="w-6 h-6 bg-[#4e8c9b]/20 flex items-center justify-center rotate-45 mb-6">
                 <div className="w-2 h-2 bg-[#4e8c9b]" />
               </div>
-              <h4 className="text-white font-manrope text-sm font-semibold mb-4">In-line with Global Demands</h4>
-              <p className="text-white/60 font-serif text-xs leading-relaxed">
-                Beyond tourism, Bali has become a primary destination for global MICE events. It successfully hosted the G20 Summit in 2022 and continues to host major international conferences. This transformation solidifies Bali as a professional hub, attracting business travelers and long-term stays, thereby diversifying the demographic of property renters and creating a dynamic housing demand.
+              <h4 className="text-[#F5EED8] font-manrope text-base font-semibold mb-4">Premium Design Commands a Premium Price</h4>
+              <p className="text-[#6A8888] text-sm leading-relaxed">
+                The Bali market has bifurcated sharply. Generic, copy-paste villas in oversaturated areas face compressing yields of 4–6%. But premium, design-led developments in undersupplied corridors, which is exactly what Rawasi builds, consistently outperform the market. The market rewards quality, and our in-house architecture team exists specifically to exploit this gap.
               </p>
             </div>
           </div>
