@@ -27,7 +27,7 @@ export default function WhyBaliPage() {
         {/* Background Image with Gradient Fade */}
         <div className="absolute inset-0 z-0">
           <Image 
-            src={withBase("/images/why_bali_hero_image.jfif")} 
+            src={withBase("/images/why_bali_hero_image.jpg")} 
             alt="Pura Ulun Danu Bratan Temple in Bali" 
             fill 
             className="object-cover object-right lg:object-center"
